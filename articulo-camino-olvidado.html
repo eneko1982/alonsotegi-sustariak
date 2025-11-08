@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Camino Olvidado de Alonsotegi - Alonsotegi Sustraiak</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .article-detail {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 3px solid var(--color-primary);
+        }
+        .article-title {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        .article-meta-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+            color: var(--color-text-light);
+            flex-wrap: wrap;
+        }
+        .article-body {
+            line-height: 1.9;
+            font-size: 1.15rem;
+        }
+        .article-body h3 {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            color: var(--color-primary-dark);
+            margin: 2.5rem 0 1rem;
+        }
+        .article-body p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+        .highlight-box {
+            background: var(--color-sepia);
+            border-left: 5px solid var(--color-primary);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 5px;
+        }
+        .route-box {
+            background: var(--color-bg-alt);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border: 3px solid var(--color-primary);
+        }
+        .route-box h4 {
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        .route-steps {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+        .route-steps li {
+            padding: 1rem;
+            margin: 0.5rem 0;
+            background: white;
+            border-radius: 5px;
+            border-left: 4px solid var(--color-secondary);
+            font-weight: 500;
+        }
+        .route-steps li::before {
+            content: "→";
+            color: var(--color-primary);
+            font-weight: bold;
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
+        }
+        .ermita-box {
+            background: linear-gradient(135deg, var(--color-bg-alt), var(--color-sepia));
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border: 2px solid var(--color-secondary);
+        }
+        .timeline-period {
+            background: white;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+            border-left: 5px solid var(--color-primary);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .timeline-period h5 {
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        .curiosidades-box {
+            background: var(--color-sepia);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border-top: 4px solid var(--color-secondary);
+        }
+        .curiosidades-box ul {
+            line-height: 2;
+            margin-left: 1.5rem;
+        }
+        @media (max-width: 600px) {
+            .article-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>Alonsotegi Sustraiak</h1>
+                <p class="nav-subtitle">Memoria Histórica</p>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="cronologia.html">Cronología</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="entonces-ahora.html">Entonces y Ahora</a></li>
+                <li><a href="articulos.html" class="active">Artículos</a></li>
+                <li><a href="colabora.html">Colabora</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <article class="article-detail">
+        <header class="article-header">
+            <h1 class="article-title">El Camino Olvidado de Alonsotegi</h1>
+            <div class="article-meta-info">
+                <span>🥾 Ruta de la Montaña</span>
+                <span>⛪ Camino de Santiago</span>
+                <span>📖 12 min de lectura</span>
+            </div>
+        </header>
+
+        <div class="article-body">
+            <p>
+                Existe un camino que durante siglos sirvió de arteria vital entre Bilbao y Castilla. Un camino que vio pasar a peregrinos, comerciantes y viajeros. Un camino que atravesaba Alonsotegi, conectándolo con el mundo. Hoy, ese camino está olvidado. Pero su memoria permanece grabada en la geografía del valle, en las ermitas que jalonaban su recorrido, y en la historia de nuestro pueblo.
+            </p>
+
+            <p>
+                Este es el relato de <strong>la Ruta de la Montaña</strong>, también conocida como <strong>el Camino Olvidado</strong>. Una vía histórica que no solo transportaba mercancías, sino que también guiaba los pasos de los peregrinos hacia Santiago de Compostela. Y Alonsotegi, lejos de ser un punto aislado en el mapa, era una parada clave en este trayecto.
+            </p>
+
+            <h3>Orígenes: Un Camino Nacido de la Necesidad</h3>
+
+            <p>
+                Las peregrinaciones a la «tumba» del apóstol Santiago se iniciaron, seguramente, en la primera mitad del siglo IX. Este fenómeno religioso tenía un doble interés: era un <strong>signo contra el islam</strong> (en plena Reconquista) y, sobre todo, representaba una oportunidad <strong>económica</strong> enorme para las regiones que atravesaban los peregrinos. Pronto se consolidaron múltiples caminos que conducían a Compostela.
+            </p>
+
+            <div class="highlight-box">
+                <h4 style="color: var(--color-primary); margin-bottom: 1rem;">📜 Las Primeras Menciones Históricas</h4>
+                <p>
+                    La primera mención de esta ruta se encuentra registrada en dos documentos fundamentales de la peregrinación jacobea: la <strong>Historia Silense</strong> y el <strong>Codex Calixtinus</strong>. Según estos textos, los regentes de la época desviaron los caminos peregrinos hacia el sur para resguardar a los viajeros de los ataques árabes que amenazaban las rutas más septentrionales.
+                </p>
+            </div>
+
+            <p>
+                Al encontrarse en una <strong>zona montañosa con valles</strong> y surcada por <strong>antiguas vías romanas</strong>, el Camino Olvidado se encontraba libre de invasores y, por tanto, garantizaba la seguridad de los viajeros. Además, la ausencia de ataques de piratas —frecuentes en la zona costera del Camino del Norte— también jugaba un papel importante.
+            </p>
+
+            <div class="timeline-period">
+                <h5>🕰️ El Auge de la Ruta: Siglos XI-XIII</h5>
+                <p style="margin: 0;">
+                    Durante poco más de <strong>200 años, entre los siglos XI y XIII</strong>, el Camino Olvidado experimentó una gran popularidad, especialmente entre los peregrinos del resto de Europa que buscaban un trayecto menos adverso. Era la ruta elegida por quienes querían evitar tanto a los árabes en el sur como a los piratas en la costa norte.
+                </p>
+            </div>
+
+            <h3>La Ruta a través de Bizkaia: De Markina a Bilbao</h3>
+
+            <p>
+                El camino de Bizkaia hacia Santiago seguía un recorrido preciso que atravesaba el corazón del territorio histórico. Partiendo desde la costa, los peregrinos seguían esta secuencia de localidades:
+            </p>
+
+            <div class="route-box">
+                <h4>🗺️ Recorrido del Camino por Bizkaia</h4>
+                <ul class="route-steps">
+                    <li>Markina</li>
+                    <li>Bolívar</li>
+                    <li>Colegiata de Zenarruza</li>
+                    <li>Gerrikaitz</li>
+                    <li>Ajangiz</li>
+                    <li>Gernika</li>
+                    <li>Muxika</li>
+                    <li>Morga</li>
+                    <li>Larrabetzu</li>
+                    <li>Lezama</li>
+                    <li>Zamudio</li>
+                    <li><strong>Bilbao (Catedral de Santiago)</strong></li>
+                </ul>
+            </div>
+
+            <h3>De Bilbao a Alonsotegi: El Tramo Crucial</h3>
+
+            <p>
+                Desde Bilbao, la ruta continuaba hacia el sur, adentrándose en el valle del Kadagua. Este tramo es donde Alonsotegi entra en la historia del Camino.
+            </p>
+
+            <p>
+                El itinerario proseguía <strong>por el barrio de Zorroza hasta Castrejana en Barakaldo</strong>, donde los peregrinos se encontraban con el mítico <strong>Puente del Diablo</strong>, similar al que existe en Balmaseda. Una vez cruzado el puente, los peregrinos tenían dos opciones: subir por la calzada hasta Santa Águeda y descender desde allí hasta el barrio de Cruces (una confluencia de caminos), o bien dirigirse por Zubileta a Burtzeña y de allí a Cruces.
+            </p>
+
+            <div class="highlight-box">
+                <h4 style="color: var(--color-primary); margin-bottom: 1rem;">🚶 El Paso por Alonsotegi</h4>
+                <p>
+                    Para seguir la Ruta de la Montaña sin cruzar las vías del ferrocarril (que llegaría siglos después), los peregrinos continuaban de frente, avanzando por la <strong>margen derecha del río Kadagua hasta llegar a Alonsotegi</strong>.
+                </p>
+                <p style="margin-top: 1rem; font-weight: 600; color: var(--color-primary);">
+                    Allí, la primera referencia que encontraban era la <strong>iglesia de San Bartolomé</strong>, el corazón del pueblo.
+                </p>
+            </div>
+
+            <h3>Las Tres Ermitas de Alonsotegi: Guardianas del Camino</h3>
+
+            <p>
+                Lo que hace único a Alonsotegi en el contexto del Camino de Santiago es su extraordinario patrimonio de ermitas vinculadas a la peregrinación. No una, sino <strong>tres ermitas</strong> daban la bienvenida a los caminantes, cada una con una advocación profundamente ligada al mundo jacobeo:
+            </p>
+
+            <div class="ermita-box">
+                <h4 style="color: var(--color-primary); font-size: 1.4rem; margin-bottom: 1.5rem; text-align: center;">⛪ Las Tres Ermitas del Peregrino</h4>
+                
+                <div style="background: white; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border-left: 5px solid var(--color-primary);">
+                    <h5 style="color: var(--color-primary); margin-bottom: 0.5rem; font-size: 1.2rem;">1. San Martín de Tours</h5>
+                    <p style="margin: 0; font-weight: 500;">
+                        <strong>El patrón de los peregrinos.</strong> San Martín de Tours es una de las advocaciones más repetidas a lo largo de todos los Caminos de Santiago. Su presencia en Alonsotegi no es casualidad: marcaba el camino para los viajeros.
+                    </p>
+                </div>
+
+                <div style="background: white; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border-left: 5px solid var(--color-secondary);">
+                    <h5 style="color: var(--color-primary); margin-bottom: 0.5rem; font-size: 1.2rem;">2. San Antolín</h5>
+                    <p style="margin: 0; font-weight: 500;">
+                        Esta ermita guarda dos tesoros jacobeos: una <strong>estatua de Santiago</strong> y la <strong>cruz de sus caballeros pintada en algunos bancos</strong>. Evidencias inequívocas de su vinculación con el Camino.
+                    </p>
+                </div>
+
+                <div style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 5px solid var(--color-accent);">
+                    <h5 style="color: var(--color-primary); margin-bottom: 0.5rem; font-size: 1.2rem;">3. Nuestra Señora de la Guía</h5>
+                    <p style="margin: 0; font-weight: 500;">
+                        <strong>Advocación muy repetida en los lugares de paso de santiaguistas.</strong> La "Virgen de la Guía" es la patrona de los caminantes, aquella que guía sus pasos hacia el destino sagrado.
+                    </p>
+                </div>
+            </div>
+
+            <p>
+                La existencia de estas tres ermitas en un pueblo tan pequeño no es fortuita. Son el testimonio silencioso de que Alonsotegi fue, durante siglos, un <strong>punto de paso obligado</strong> para los peregrinos que seguían la Ruta de la Montaña.
+            </p>
+
+            <h3>San Antolín: Una Ermita Familiar</h3>
+
+            <p>
+                De las tres ermitas, <strong>San Antolín</strong> merece una mención especial, no solo por su vinculación jacobea, sino por su valor histórico y arquitectónico excepcional.
+            </p>
+
+            <p>
+                La ubicación geográfica del municipio de Alonsotegi en el corredor que surca el río Kadagua —dividiendo los montes Ganekogorta y Pagasarri de la sierra de Sasiburu— y los ricos recursos naturales con los que cuenta (minas, robledales, hayedos y pastizales), han hecho que la presencia del hombre en el lugar haya sido temprana. Los seles, neveros y caseríos que han llegado hasta nuestros días demuestran la actividad que durante siglos se llevó a cabo aquí.
+            </p>
+
+            <div class="highlight-box">
+                <h4 style="color: var(--color-primary); margin-bottom: 1rem;">📅 La Historia de Alonsotegi en Dos Hitos</h4>
+                <p><strong>Siglo XIV:</strong> Alonsotegi entra en la historia (las primeras menciones documentales del topónimo se corresponden a esta época), como parte integrante de la anteiglesia de Arrigorriaga.</p>
+                <p style="margin-top: 1rem;"><strong>Siglo XVI:</strong> La desanexión de Arrigorriaga marca el inicio de la andadura de Alonsotegi como anteiglesia independiente.</p>
+            </div>
+
+            <p>
+                Como testimonio de esta época, el municipio guarda su <strong>tesoro histórico-artístico</strong> en el barrio de Iráuregui: la ermita de San Antolín, de la que existen noticias desde el <strong>siglo XV</strong>.
+            </p>
+
+            <h4 style="color: var(--color-primary); font-size: 1.4rem; margin-top: 2rem;">👨‍👩‍👧‍👦 Los Fundadores: La Familia Coscojales</h4>
+
+            <p>
+                La ermita fue edificada de la mano de la <strong>noble y destacada familia Coscojales</strong>, dueños de una ferrería y una torre fuerte en el lugar, y que a lo largo de los siglos XVI y XVII guardaron en propiedad varios seles de Alonsotegi.
+            </p>
+
+            <p>
+                Fue el matrimonio formado por <strong>Antón Pérez de Coscojales</strong> y <strong>Elvira Jiménez de la Rentería</strong> quien fundó la ermita y ejerció el patronazgo sobre la misma. Este matrimonio tiene un lugar especial en la historia: eran los <strong>abuelos del célebre historiógrafo vizcaíno Martín de Coscojales</strong>, nacido en 1542, uno de los primeros cronistas de Bizkaia.
+            </p>
+
+            <h4 style="color: var(--color-primary); font-size: 1.4rem; margin-top: 2rem;">🏛️ Arquitectura y Tesoros de San Antolín</h4>
+
+            <p>
+                Dado que a finales del siglo XIX se encontraba en situación de ruina, la ermita fue restaurada a comienzos del siglo XX. No obstante, conserva el <strong>perímetro mural y los dos accesos que se abrieron en su etapa de fundación</strong>, además de la totalidad de la cabecera en la que se han mantenido las <strong>pinturas grisallas</strong>.
+            </p>
+
+            <div style="background: white; padding: 2rem; border-radius: 10px; margin: 2rem 0; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                <h5 style="color: var(--color-primary); margin-bottom: 1rem;">🏗️ Descripción arquitectónica</h5>
+                <p>
+                    Construida en <strong>fábrica de mampostería de arenisca</strong>, posee una nave de forma rectangular y la cabecera destacada, ligeramente más estrecha. Son escasos los vanos que se abren en las paredes, destacando principalmente los que se ubican en el ábside: dos pequeñas ventanas en los lados y un óculo en la parte frontal.
+                </p>
+                <p style="margin-top: 1rem;">
+                    A los pies de la ermita se alza una <strong>espadaña que acoge dos campanas</strong>, rematadas por un frontón triangular coronado por una cruz. En la parte baja se ubica uno de los accesos al templo, bajo un pequeño pórtico construido recientemente que ofrece abrigo. Las dos puertas de acceso presentan un <strong>arco dovelado de medio punto</strong>.
+                </p>
+                <p style="margin-top: 1rem;">
+                    En su interior, el ábside presenta una <strong>bóveda con crucería de terceletes y nervios simples</strong> a lo largo de la nave.
+                </p>
+            </div>
+
+            <h4 style="color: var(--color-primary); font-size: 1.4rem; margin-top: 2rem;">🎨 El Retablo Original: Un Tesoro Único</h4>
+
+            <p>
+                San Antolín conserva su <strong>retablo original</strong>, elemento que hace de este templo algo verdaderamente destacable en el panorama vizcaíno: es la <strong>única ermita de la provincia que ha logrado conservar el retablo primigenio</strong>.
+            </p>
+
+            <div class="highlight-box">
+                <h4 style="color: var(--color-primary); margin-bottom: 1rem;">🖼️ El Retablo del Siglo XVI</h4>
+                <p>
+                    Perteneciente al siglo XVI, el retablo presenta un <strong>estilo romanista</strong> y se organiza en un banco sobre el que reposa el cuerpo distribuido en tres calles separadas por columnas de orden jónico y un ático.
+                </p>
+                <p style="margin-top: 1rem;">
+                    En el banco del retablo destacan las figuras de los <strong>patronos de la ermita</strong>: <strong>Antón Pérez de Coscojales a la izquierda</strong> y <strong>Elvira Jiménez de la Rentería a la derecha</strong>, ambos vestidos con ropajes propios del siglo XVI. Son reseñables también los bajorrelieves y el Cristo Crucificado que remata el ático.
+                </p>
+                <p style="margin-top: 1rem;">
+                    Las tres imágenes que el retablo acoge —una Virgen con el niño gótico, una talla de madera policromada de San Antolín (XVII) y una tercera figura del siglo XVI— no se corresponden al retablo originario, habiendo sido incorporadas posteriormente.
+                </p>
+            </div>
+
+            <h3>El Camino Hoy: Cómo Seguir la Ruta</h3>
+
+            <p>
+                Aunque el Camino Olvidado ya no es transitado por peregrinos, todavía es posible seguir su trazado histórico. Al llegar a Alonsotegi, el caminante moderno tiene dos opciones para continuar:
+            </p>
+
+            <div class="route-box">
+                <h4>🚶 Opción 1: Por la Iglesia de San Bartolomé</h4>
+                <p style="line-height: 1.8;">
+                    Cruzar el primer puente y, pasando junto a la iglesia, salir a la carretera. Esta opción permite usar algún bar si se necesita descanso o avituallamiento.
+                </p>
+            </div>
+
+            <div class="route-box">
+                <h4>🚶 Opción 2: Por la Ermita de San Antolín</h4>
+                <p style="line-height: 1.8; margin-bottom: 1rem;">
+                    Seguir adelante y, dejando a la derecha la ermita de San Antolín, cruzar el moderno puente sobre el río para salir a la carretera. Cruzado el semáforo, seguir la carretera hacia la derecha.
+                </p>
+                <p style="line-height: 1.8; font-style: italic; color: var(--color-text-light);">
+                    <strong>Precaución:</strong> En un momento determinado, la acera se pierde y el arcén es estrecho. Se recomienda caminar bien pegados a la orilla y con mucho cuidado, hasta encontrar otra vez acera al llegar al polígono industrial.
+                </p>
+            </div>
+
+            <p>
+                Caminando por la acera del polígono, pronto veremos de frente la <strong>ermita de Nuestra Señora de la Guía</strong>. Aquí, un giro a la izquierda y subiendo una pequeña cuesta llegaremos a un canal. Pasando por debajo del puente de la autovía, comenzamos a subir una pequeña cuesta y bajarla en la parte opuesta, continuando por un bonito paseo por la orilla del río. El siguiente pueblo al que llegaremos es <strong>Güeñes</strong>.
+            </p>
+
+            <h3>Curiosidades: Registros Históricos de Peregrinos en Bizkaia</h3>
+
+            <p>
+                El paso de peregrinos por Bizkaia no es una leyenda, sino un hecho documentado. Los archivos históricos del territorio conservan menciones específicas que demuestran el flujo continuo de caminantes jacobeos:
+            </p>
+
+            <div class="curiosidades-box">
+                <h4 style="color: var(--color-primary); margin-bottom: 1rem; font-size: 1.3rem;">📜 Registros Documentados</h4>
+                <ul>
+                    <li><strong>1494:</strong> Un obispo armenio duerme en Portugalete.</li>
+                    <li><strong>1506:</strong> Se prohíbe en la ciudad de Orduña que la gente pida limosna, excepto a los romeros.</li>
+                    <li><strong>1515:</strong> Se permite a Zenarruza cobrar impuestos para arreglar el albergue y camino.</li>
+                    <li><strong>1563:</strong> Martín del Barco, vecino de Muskiz, persigue a unos romeros que le habían robado, hasta Guriezo.</li>
+                    <li><strong>1574:</strong> Se acusa a un vecino de Las Carreras de matar a un romero.</li>
+                    <li><strong>1661:</strong> Se funda en Bilbao el Hospital de San Antón para los peregrinos.</li>
+                </ul>
+            </div>
+
+            <p>
+                Estos registros —algunos dramáticos, otros administrativos— demuestran que el flujo de peregrinos por Bizkaia era constante y suficientemente significativo como para generar normativas, conflictos y estructuras de acogida.
+            </p>
+
+            <h3>Un Camino que Espera Ser Redescubierto</h3>
+
+            <p>
+                Hoy, el Camino Olvidado de Alonsotegi es exactamente eso: olvidado. Las generaciones actuales caminan por las aceras del pueblo sin saber que están pisando una de las rutas jacobeas más antiguas de Europa. Las tres ermitas permanecen en pie, pero pocos conocen su vinculación con el mundo de la peregrinación.
+            </p>
+
+            <p>
+                Sin embargo, la memoria del camino permanece. Está grabada en los arcos de medio punto de San Antolín, en la advocación de la Virgen de la Guía, en el nombre de San Martín de Tours. Está en el trazado de las calles, en el curso del Kadagua, en la orientación de los puentes.
+            </p>
+
+            <div class="highlight-box" style="background: linear-gradient(135deg, var(--color-sepia), var(--color-bg-alt)); margin-top: 3rem;">
+                <h4 style="color: var(--color-primary); font-size: 1.3rem; margin-bottom: 1rem;">💭 Reflexión final</h4>
+                <p>
+                    El Camino Olvidado nos recuerda que Alonsotegi no fue nunca un lugar aislado. Durante siglos, fuimos un punto de paso, un refugio, un lugar donde los peregrinos encontraban ermitas que guiaban sus pasos. Fuimos parte de una red europea de fe, comercio y cultura.
+                </p>
+                <p style="margin-top: 1rem;">
+                    Quizás ha llegado el momento de dejar de olvidar este camino. De recuperar su memoria, señalizar su ruta, restaurar sus ermitas. De recordar que, antes de ser un pueblo industrial, antes de ser el municipio 111, Alonsotegi fue un lugar de acogida para los caminantes del mundo. Y esa, también, es una raíz de la que podemos sentirnos orgullosos.
+                </p>
+            </div>
+
+            <div style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-alt); border-radius: 10px; border-left: 4px solid var(--color-primary);">
+                <h4 style="color: var(--color-primary); margin-bottom: 1rem;">📚 Fuentes consultadas</h4>
+                <ul style="line-height: 2; color: var(--color-text-light);">
+                    <li>Historia Silense y Codex Calixtinus - Referencias al Camino de Santiago</li>
+                    <li>Blog Alonsotegi Sustraiak - Artículo "El Camino Olvidado de Alonsotegi"</li>
+                    <li>Documentación histórica sobre la ermita de San Antolín</li>
+                    <li>Archivos históricos de Bizkaia sobre peregrinos (siglos XV-XVII)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 4rem; padding: 2rem; background: var(--color-bg-alt); border-radius: 10px;">
+            <a href="articulos.html" class="btn btn-primary">← Volver a Artículos</a>
+        </div>
+    </article>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Alonsotegi Sustraiak</h3>
+                    <p>Recuperando y compartiendo la memoria histórica de nuestro pueblo.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="cronologia.html">Cronología</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                        <li><a href="articulos.html">Artículos</a></li>
+                        <li><a href="colabora.html">Colabora</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p>¿Tienes fotos o historias que compartir?</p>
+                    <a href="colabora.html" class="btn btn-secondary">Colabora con nosotros</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Alonsotegi Sustraiak. Proyecto de recuperación de memoria histórica.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
