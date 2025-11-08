@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1896: La Primera Fotografía de Alonsotegi - Alonsotegi Sustraiak</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .article-detail {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 3px solid var(--color-primary);
+        }
+        .article-title {
+            font-family: var(--font-heading);
+            font-size: 2.8rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        .article-meta-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+            color: var(--color-text-light);
+            flex-wrap: wrap;
+        }
+        .article-body {
+            line-height: 1.9;
+            font-size: 1.15rem;
+        }
+        .article-body h3 {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            color: var(--color-primary-dark);
+            margin: 2.5rem 0 1rem;
+        }
+        .article-body p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+        .highlight-box {
+            background: var(--color-sepia);
+            border-left: 5px solid var(--color-primary);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 5px;
+        }
+        .image-comparison {
+            margin: 3rem 0;
+            background: var(--color-bg-alt);
+            padding: 2rem;
+            border-radius: 10px;
+            border: 3px solid var(--color-primary);
+        }
+        .image-comparison h4 {
+            color: var(--color-primary);
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+        .comparison-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .comparison-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+        .comparison-label {
+            text-align: center;
+            font-weight: 600;
+            color: var(--color-primary-dark);
+            font-size: 1.1rem;
+            padding: 0.5rem;
+            background: var(--color-sepia);
+            border-radius: 5px;
+            margin-bottom: 0.5rem;
+        }
+        .comparison-description {
+            text-align: center;
+            color: var(--color-text-light);
+            font-size: 0.95rem;
+            font-style: italic;
+        }
+        .photo-details {
+            background: linear-gradient(135deg, #fff8dc, #faebd7);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border: 3px solid var(--color-secondary);
+        }
+        .photo-details h4 {
+            color: var(--color-primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .detail-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .detail-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--color-accent);
+        }
+        .detail-label {
+            font-weight: 600;
+            color: var(--color-primary-dark);
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .detail-value {
+            color: var(--color-text);
+            font-size: 1.1rem;
+        }
+        .social-context {
+            background: #fff0f0;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border: 3px solid #cd5c5c;
+        }
+        .social-context h4 {
+            color: #8b0000;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+        .workers-box {
+            background: var(--color-bg-alt);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border: 2px solid var(--color-primary);
+        }
+        .workers-box h5 {
+            color: var(--color-primary-dark);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        .observation-box {
+            background: white;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+            border-left: 5px solid var(--color-secondary);
+        }
+        .observation-box strong {
+            color: var(--color-primary);
+            font-size: 1.1rem;
+        }
+        .patronage-box {
+            background: linear-gradient(135deg, var(--color-sepia), var(--color-bg-alt));
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border: 3px solid var(--color-accent);
+        }
+        .historical-value {
+            background: #f0f8ff;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border: 3px solid #4682b4;
+        }
+        .historical-value h4 {
+            color: #1e3a5f;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 2rem;
+            }
+            .detail-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>Alonsotegi Sustraiak</h1>
+                <p class="nav-subtitle">Memoria Histórica</p>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="cronologia.html">Cronología</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="entonces-ahora.html">Entonces y Ahora</a></li>
+                <li><a href="articulos.html" class="active">Artículos</a></li>
+                <li><a href="colabora.html">Colabora</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <article class="article-detail">
+        <header class="article-header">
+            <h1 class="article-title">1896: La Primera Fotografía de Alonsotegi</h1>
+            <div class="article-meta-info">
+                <span>📷 Historia Social</span>
+                <span>📅 1896</span>
+                <span>👥 Memoria Obrera</span>
+                <span>📖 8 min de lectura</span>
+            </div>
+        </header>
+
+        <div class="article-body">
+            <p>
+                Existe un momento fundacional en la historia visual de cualquier comunidad: aquel instante en que, por primera vez, sus habitantes quedan inmortalizados en una imagen. Para Alonsotegi, ese momento llegó en 1896. No fue una fotografía casual ni un retrato familiar. Fue un testimonio colectivo, un acto de afirmación social y, sin saberlo entonces, el documento histórico más valioso que poseemos sobre el Alonsotegi de finales del siglo XIX.
+            </p>
+
+            <p>
+                Esta fotografía, conservada a lo largo de más de un siglo, nos muestra al personal completo de la Fábrica de Hilados de Irauregi. En ella aparecen los rostros de decenas de trabajadores que, un día de 1896, se reunieron frente a una cámara fotográfica para dejar testimonio de su existencia. Entre esos rostros, muchos son niños. Y junto a ellos, distantes pero presentes, los patronos de la fábrica.
+            </p>
+
+            <p>
+                Esta imagen no es solo una fotografía: es un documento social excepcional que captura, en un único instante congelado en el tiempo, la realidad del trabajo industrial en nuestro valle a finales del siglo XIX. Es, literalmente, el primer espejo en el que Alonsotegi se vio a sí mismo.
+            </p>
+
+            <h3>El Testimonio Visual: Original y Restaurado</h3>
+
+            <p>
+                Presentamos aquí la fotografía original de 1896, junto con una versión restaurada digitalmente mediante inteligencia artificial. La restauración no busca "inventar" detalles que no existían, sino recuperar la nitidez y claridad que el paso de 128 años ha borrado. Ambas versiones son igualmente valiosas: la original por su autenticidad histórica, la restaurada por permitirnos ver con mayor claridad los rostros y detalles de esa época.
+            </p>
+
+            <div class="image-comparison">
+                <h4>📷 Comparación: Original vs. Restauración Digital</h4>
+                
+                <div class="comparison-grid">
+                    <div class="comparison-item">
+                        <div class="comparison-label">Fotografía Original (1896)</div>
+                        <img src="images/fotografia-1896-original.jpg" alt="Fotografía original del personal de la Fábrica de Hilados de Irauregi, 1896">
+                        <p class="comparison-description">
+                            Imagen histórica tal como ha sobrevivido durante 128 años. Nótese el deterioro natural del soporte fotográfico y la pérdida de contraste.
+                        </p>
+                    </div>
+
+                    <div class="comparison-item">
+                        <div class="comparison-label">Restauración con IA (2024)</div>
+                        <img src="images/fotografia-1896-restaurada.jpg" alt="Fotografía restaurada digitalmente del personal de la Fábrica de Hilados de Irauregi">
+                        <p class="comparison-description">
+                            Versión restaurada mediante inteligencia artificial. La restauración recupera nitidez, contraste y detalles faciales sin alterar la composición original.
+                        </p>
+                    </div>
+                </div>
+
+                <p style="text-align: center; margin-top: 1.5rem; padding: 1rem; background: var(--color-sepia); border-radius: 5px; font-style: italic; color: var(--color-text-light);">
+                    ⚠️ <strong>Nota sobre la restauración:</strong> La restauración digital con IA respeta rigurosamente la imagen original. No se han añadido elementos ni personas. Solo se ha mejorado la nitidez y el contraste para facilitar su observación y estudio.
+                </p>
+            </div>
+
+            <h3>La Fábrica de Hilados de Irauregi</h3>
+
+            <p>
+                En 1896, la Fábrica de Hilados de Irauregi era uno de los motores económicos del valle. Esta industria textil, ubicada en el barrio de Irauregi (que entonces pertenecía administrativamente a Arrigorriaga, antes de su anexión a Barakaldo y posterior integración en el moderno municipio de Alonsotegi), empleaba a decenas de trabajadores en la producción de hilados.
+            </p>
+
+            <div class="photo-details">
+                <h4>🔍 Ficha Técnica de la Fotografía</h4>
+                
+                <div class="detail-grid">
+                    <div class="detail-item">
+                        <div class="detail-label">Año</div>
+                        <div class="detail-value">1896</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Lugar</div>
+                        <div class="detail-value">Fábrica de Hilados de Irauregi</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Tema</div>
+                        <div class="detail-value">Personal completo de la fábrica</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Técnica</div>
+                        <div class="detail-value">Fotografía en placa de vidrio (probable)</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Estado Original</div>
+                        <div class="detail-value">Deteriorado por el tiempo</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Valor Histórico</div>
+                        <div class="detail-value">Incalculable - Primera foto de Alonsotegi</div>
+                    </div>
+                </div>
+
+                <p style="margin-top: 1.5rem; font-style: italic; color: var(--color-text-light);">
+                    Esta fotografía es la más antigua conocida de Alonsotegi. Representa el primer testimonio visual directo de sus habitantes y su actividad económica.
+                </p>
+            </div>
+
+            <h3>Lo Que La Fotografía Nos Cuenta</h3>
+
+            <p>
+                Observar esta imagen con detenimiento es abrir una ventana directa al Alonsotegi de hace más de un siglo. Cada detalle cuenta una historia, cada rostro representa una vida. Pero hay dos aspectos que destacan de forma inmediata y que nos obligan a reflexionar sobre la realidad social de aquella época.
+            </p>
+
+            <div class="workers-box">
+                <h5>👥 Composición del Personal</h5>
+                
+                <div class="observation-box">
+                    <strong>Observación 1: El Trabajo Infantil</strong>
+                    <p style="margin-top: 0.8rem;">
+                        Es imposible no advertirlo: en la fotografía aparece un <strong>gran número de niños trabajadores</strong>. Niños que, en lugar de estar en la escuela, formaban parte de la plantilla de la fábrica. Sus rostros serios, sus posturas rígidas ante la cámara, nos hablan de una infancia robada por la necesidad económica.
+                    </p>
+                    <p style="margin-top: 0.8rem; color: var(--color-text-light); font-style: italic;">
+                        En 1896, el trabajo infantil era una práctica común en la industria. Los niños trabajaban jornadas completas, realizando tareas repetitivas en condiciones durísimas, a cambio de salarios mínimos que complementaban la economía familiar.
+                    </p>
+                </div>
+
+                <div class="observation-box">
+                    <strong>Observación 2: Los Patronos</strong>
+                    <p style="margin-top: 0.8rem;">
+                        También es destacable la presencia de <strong>los patronos de la fábrica</strong> en la composición fotográfica. Su ubicación en la imagen, su vestimenta diferenciada, su postura corporal, establecen claramente la jerarquía social de la época. No es casual: la fotografía refleja visualmente la estructura de clases del capitalismo industrial.
+                    </p>
+                </div>
+            </div>
+
+            <div class="social-context">
+                <h4>⚙️ Contexto Social e Industrial</h4>
+                <p>
+                    La fotografía de 1896 nos sitúa en plena Segunda Revolución Industrial. España, aunque con retraso respecto a otros países europeos, experimentaba un proceso de industrialización. El País Vasco, y especialmente Bizkaia, era uno de los epicentros de este cambio.
+                </p>
+                <p style="margin-top: 1rem;">
+                    Las fábricas textiles, como la de Irauregi, formaban parte de este tejido industrial emergente. Junto con las ferrerías tradicionales, las minas de hierro y las primeras grandes industrias siderúrgicas, configuraban una nueva realidad económica y social que transformaba radicalmente el valle del Kadagua.
+                </p>
+                <p style="margin-top: 1rem; font-weight: 600; color: #8b0000;">
+                    Sin embargo, esta industrialización se construyó sobre la explotación de la mano de obra, incluyendo la de niños y mujeres, que trabajaban en condiciones precarias sin apenas derechos laborales.
+                </p>
+            </div>
+
+            <h3>La Infancia Robada: El Trabajo Infantil en 1896</h3>
+
+            <p>
+                Los niños que vemos en la fotografía de 1896 no son una excepción. Son la norma de su tiempo. A finales del siglo XIX, el trabajo infantil estaba completamente normalizado en la industria española. Los niños comenzaban a trabajar desde los 6 o 7 años, muchas veces incluso antes.
+            </p>
+
+            <p>
+                En las fábricas textiles, los niños realizaban tareas que requerían manos pequeñas y dedos ágiles: enhebrar hilos, limpiar bajo las máquinas en marcha, recoger desechos. Trabajaban jornadas de 12 a 14 horas diarias, en naves mal ventiladas, con riesgo constante de accidentes laborales. A cambio, recibían un salario miserable que, sin embargo, era vital para la supervivencia de sus familias.
+            </p>
+
+            <div class="highlight-box">
+                <p style="font-size: 1.1rem; font-weight: 600; color: var(--color-primary);">
+                    📚 Contexto Legal: La Regulación del Trabajo Infantil
+                </p>
+                <p style="margin-top: 1rem;">
+                    En 1896, España carecía de una legislación efectiva de protección de menores en el trabajo. La primera ley de verdadero alcance, la <strong>Ley de 13 de marzo de 1900</strong>, aún estaba a cuatro años de distancia. Esta ley prohibiría el trabajo de menores de 10 años y limitaría la jornada de los menores de 14 años, aunque su aplicación real sería muy deficiente durante décadas.
+                </p>
+                <p style="margin-top: 1rem; font-style: italic; color: var(--color-text-light);">
+                    Los niños de la fotografía de 1896 trabajaban sin apenas protección legal alguna.
+                </p>
+            </div>
+
+            <h3>Los Patronos: La Otra Cara de la Fotografía</h3>
+
+            <p>
+                En el otro extremo social de la composición fotográfica aparecen los patronos de la Fábrica de Hilados de Irauregi. Su presencia en la imagen no es accidental: es una declaración de propiedad y autoridad.
+            </p>
+
+            <div class="patronage-box">
+                <h4 style="color: var(--color-primary); margin-bottom: 1rem; font-size: 1.4rem;">👔 La Clase Patronal</h4>
+                <p>
+                    Los dueños de la fábrica aparecen claramente diferenciados del resto del personal. Su vestimenta (trajes formales, sombreros), su posición en la composición (probablemente en lugar destacado), y su propia presencia en la foto son indicadores de estatus.
+                </p>
+                <p style="margin-top: 1rem;">
+                    En aquella época, hacerse fotografiar era todavía un acto significativo. Las cámaras eran caras, el proceso era complejo y lento. Que los patronos dedicaran tiempo y recursos a documentar a todo el personal de la fábrica refleja varias cosas: una cierta modernidad empresarial, pero también la voluntad de proyectar una imagen de "familia industrial" que, en realidad, encubría relaciones laborales profundamente desiguales.
+                </p>
+            </div>
+
+            <h3>El Valor Histórico Incalculable</h3>
+
+            <p>
+                Más allá de las reflexiones sociales que suscita, esta fotografía de 1896 tiene un valor documental extraordinario. Es el primer testimonio visual de nuestros antepasados, el primer espejo fotográfico en el que Alonsotegi se vio reflejado.
+            </p>
+
+            <div class="historical-value">
+                <h4>🏆 ¿Por Qué Es Tan Importante Esta Fotografía?</h4>
+                
+                <p><strong>1. Primera imagen conocida:</strong> Es la fotografía más antigua de Alonsotegi que se conserva. Todo lo anterior son documentos escritos, planos o dibujos, pero no rostros reales.</p>
+                
+                <p style="margin-top: 1rem;"><strong>2. Testimonio demográfico:</strong> Nos permite ver quiénes habitaban el valle en aquella época, sus edades aproximadas, su composición social.</p>
+                
+                <p style="margin-top: 1rem;"><strong>3. Documento de historia social:</strong> Evidencia las condiciones laborales, el trabajo infantil, la jerarquía de clases de forma visual e innegable.</p>
+                
+                <p style="margin-top: 1rem;"><strong>4. Memoria industrial:</strong> La Fábrica de Hilados de Irauregi ya no existe. Esta fotografía es uno de los pocos testimonios de su existencia.</p>
+                
+                <p style="margin-top: 1rem;"><strong>5. Identidad colectiva:</strong> Estos rostros son literalmente nuestros bisabuelos y tatarabuelos. Es nuestra memoria familiar colectiva.</p>
+            </div>
+
+            <h3>Reflexión: Mirar al Pasado para Entender el Presente</h3>
+
+            <p>
+                Observar esta fotografía de 1896 desde nuestro presente de 2024 produce vértigo. Han pasado 128 años. Los niños que vemos en la imagen, si vivieron una vida larga, pudieron conocer el siglo XXI. Sus descendientes directos, sus bisnietos y tataranietos, son vecinos de Alonsotegi hoy.
+            </p>
+
+            <p>
+                En ese lapso de tiempo, todo ha cambiado. El trabajo infantil está prohibido y penalizado. Los derechos laborales están (al menos formalmente) reconocidos. La jornada de 12 horas es ilegal. La educación es obligatoria hasta los 16 años. Las condiciones de vida han mejorado de forma inimaginable para aquellos niños de 1896.
+            </p>
+
+            <p>
+                Pero mirar esta fotografía no debe generarnos solo satisfacción por el progreso alcanzado. También debe recordarnos cuán frágiles son estos avances, cuánto costaron conseguirlos (luchas obreras, huelgas, sacrificios), y cuánta vigilancia requieren para no perderlos.
+            </p>
+
+            <div class="highlight-box" style="background: linear-gradient(135deg, var(--color-sepia), var(--color-bg-alt)); margin-top: 3rem;">
+                <h4 style="color: var(--color-primary); font-size: 1.4rem; margin-bottom: 1rem;">💭 Reflexión Final</h4>
+                <p>
+                    Los rostros que nos miran desde 1896 son un recordatorio silencioso pero potente. Nos recuerdan de dónde venimos. Nos hablan de un Alonsotegi que se ganaba el pan con el sudor de su frente, literalmente desde la infancia. Nos muestran una sociedad profundamente desigual, donde unos pocos poseían y muchos solo podían ofrecer su trabajo.
+                </p>
+                <p style="margin-top: 1.5rem;">
+                    Pero también nos hablan de resiliencia, de supervivencia, de dignidad en medio de la adversidad. Esos niños y adultos, pese a todo, posaron para la cámara. Se dejaron fotografiar. Quisieron, de algún modo, ser recordados. Y lo han conseguido: 128 años después, los estamos mirando, los estamos honrando y los estamos recordando.
+                </p>
+                <p style="margin-top: 1.5rem; font-weight: 600; color: var(--color-primary-dark);">
+                    Esta fotografía no es solo historia. Es memoria. Es identidad. Es, en definitiva, parte fundamental de nuestras raíces, de nuestros <em>sustraiak</em>.
+                </p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 4rem; padding: 2rem; background: var(--color-bg-alt); border-radius: 10px;">
+            <h3 style="color: var(--color-primary); margin-bottom: 1rem;">📸 ¿Reconoces a Algún Familiar?</h3>
+            <p style="color: var(--color-text-light); margin-bottom: 1.5rem;">
+                Si crees reconocer a algún familiar en esta fotografía histórica, o si tienes información sobre las personas que aparecen en ella, nos encantaría saberlo. Tu testimonio puede ayudarnos a poner nombres a estos rostros y enriquecer la memoria colectiva de Alonsotegi.
+            </p>
+            <a href="colabora.html" class="btn btn-primary" style="display: inline-block; margin-top: 1rem;">Comparte tu información</a>
+        </div>
+
+        <div style="margin-top: 3rem; padding: 2rem; background: var(--color-sepia); border-radius: 10px; border-left: 5px solid var(--color-primary);">
+            <h4 style="color: var(--color-primary); margin-bottom: 1rem;">📚 Notas y Contexto</h4>
+            <ul style="line-height: 2; color: var(--color-text-light);">
+                <li><strong>Fotografía original:</strong> Conservada en colección particular/archivo municipal</li>
+                <li><strong>Restauración digital:</strong> Realizada en 2024 mediante inteligencia artificial (respetando rigurosamente la imagen original)</li>
+                <li><strong>Contexto histórico:</strong> Basado en estudios sobre industrialización en Bizkaia y legislación laboral española de finales del siglo XIX</li>
+                <li><strong>Fábrica de Hilados de Irauregi:</strong> Industria textil ubicada en el actual barrio de Irauregi</li>
+            </ul>
+            <p style="margin-top: 1.5rem; font-style: italic; color: var(--color-text-light); font-size: 0.95rem;">
+                Este artículo es un homenaje a todos los trabajadores, adultos y niños, que construyeron con su esfuerzo el Alonsotegi moderno.
+            </p>
+        </div>
+
+        <div style="text-align: center; margin-top: 4rem; padding: 2rem; background: var(--color-bg-alt); border-radius: 10px;">
+            <a href="articulos.html" class="btn btn-primary">← Volver a Artículos</a>
+        </div>
+    </article>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Alonsotegi Sustraiak</h3>
+                    <p>Recuperando y compartiendo la memoria histórica de nuestro pueblo.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="cronologia.html">Cronología</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                        <li><a href="articulos.html">Artículos</a></li>
+                        <li><a href="colabora.html">Colabora</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p>¿Tienes fotos o historias que compartir?</p>
+                    <a href="colabora.html" class="btn btn-secondary">Colabora con nosotros</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Alonsotegi Sustraiak. Proyecto de recuperación de memoria histórica.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
