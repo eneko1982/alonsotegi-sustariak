@@ -1,0 +1,44 @@
+==================================================
+  ALONSOTEGI SUSTRAIAK - INICIO RÁPIDO
+==================================================
+
+PASO 1: Añadir tus fotos
+-------------------------
+1. Ve a la carpeta: images/fotos-historicas/
+2. Reemplaza los archivos vacíos con tus 5 fotos:
+   - foto1.jpg → Vista río con edificios
+   - foto2.jpg → Presa antigua
+   - foto3.jpg → Vista panorámica
+   - foto4.jpg → Caserío
+   - foto5.jpg → Puente Kadagua
+
+3. Copia foto1.jpg también como: images/hero-alonsotegi.jpg
+
+PASO 2: Ver la web
+-------------------
+Haz doble clic en: index.html
+
+PASO 3: Publicar en Internet (GitHub Pages)
+-------------------------------------------
+1. Instala Git: https://git-scm.com
+2. Crea cuenta en: https://github.com
+3. Ejecuta estos comandos en la carpeta:
+
+   git init
+   git add .
+   git commit -m "Primera versión"
+   
+4. Crea repo en GitHub llamado: alonsotegi-sustraiak
+
+5. Conecta y sube:
+   git remote add origin https://github.com/TU-USUARIO/alonsotegi-sustraiak.git
+   git branch -M main
+   git push -u origin main
+
+6. En GitHub: Settings → Pages → Source: main → Save
+
+¡Tu web estará en: TU-USUARIO.github.io/alonsotegi-sustraiak!
+
+==================================================
+Lee README.md para información completa
+==================================================

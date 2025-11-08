@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colabora - Alonsotegi Sustraiak</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>Alonsotegi Sustraiak</h1>
+                <p class="tagline">Memoria Histórica</p>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="cronologia.html">Cronología</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="entonces-ahora.html">Entonces y Ahora</a></li>
+                <li><a href="articulos.html">Artículos</a></li>
+                <li><a href="colabora.html" class="active">Colabora</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="page-header">
+        <div class="container">
+            <h1>Colabora con Nosotros</h1>
+            <p>Tu aportación enriquece nuestra memoria colectiva</p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="content-wrapper">
+                <h2>¿Cómo puedes ayudar?</h2>
+                <div class="collaboration-grid">
+                    <div class="collab-item">
+                        <h3>📷 Comparte Fotografías</h3>
+                        <p>¿Tienes fotos antiguas de Alonsotegi? Son un tesoro histórico.</p>
+                    </div>
+                    <div class="collab-item">
+                        <h3>📖 Cuenta Historias</h3>
+                        <p>Las anécdotas familiares y recuerdos personales son parte de nuestra identidad.</p>
+                    </div>
+                    <div class="collab-item">
+                        <h3>📄 Aporta Documentos</h3>
+                        <p>Documentos históricos, cartas, recortes de prensa...</p>
+                    </div>
+                    <div class="collab-item">
+                        <h3>🔍 Investiga</h3>
+                        <p>Si te apasiona la historia local, únete al proyecto de investigación.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Formulario de Contacto</h2>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Nombre *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Asunto</label>
+                    <select id="subject" name="subject">
+                        <option>Aportar fotografías</option>
+                        <option>Compartir historias</option>
+                        <option>Aportar documentos</option>
+                        <option>Colaborar en investigación</option>
+                        <option>Otro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje *</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Enviar Mensaje</button>
+            </form>
+            <div class="form-message" id="formMessage"></div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 Alonsotegi Sustraiak</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
