@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zamundi: El Monte de Fuego - Alonsotegi Sustraiak</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .article-detail {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 3px solid var(--color-primary);
+        }
+        .article-title {
+            font-family: var(--font-heading);
+            font-size: 2.8rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        .article-meta-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+            color: var(--color-text-light);
+            flex-wrap: wrap;
+        }
+        .article-body {
+            line-height: 1.9;
+            font-size: 1.15rem;
+        }
+        .article-body h3 {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            color: var(--color-primary-dark);
+            margin: 2.5rem 0 1rem;
+        }
+        .article-body p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+        .highlight-box {
+            background: var(--color-sepia);
+            border-left: 5px solid var(--color-primary);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 5px;
+        }
+        .etymology-box {
+            background: linear-gradient(135deg, #fff8dc, #faebd7);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2.5rem 0;
+            border: 3px solid var(--color-secondary);
+        }
+        .etymology-box h4 {
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .etymology-version {
+            background: white;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+            border-left: 5px solid var(--color-accent);
+        }
+        .etymology-version h5 {
+            color: var(--color-primary-dark);
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+        }
+        .mining-heritage {
+            background: var(--color-bg-alt);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border: 2px solid var(--color-primary);
+        }
+        .timeline-docs {
+            background: #f9f6f0;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+            border: 2px solid var(--color-primary-dark);
+        }
+        .timeline-docs h4 {
+            color: var(--color-primary-dark);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        .doc-entry {
+            background: white;
+            padding: 1rem;
+            margin: 0.8rem 0;
+            border-radius: 5px;
+            border-left: 4px solid var(--color-accent);
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+        }
+        .doc-year {
+            font-weight: bold;
+            color: var(--color-primary);
+            display: inline-block;
+            min-width: 80px;
+        }
+        .ermita-section {
+            background: linear-gradient(135deg, var(--color-sepia), var(--color-bg-alt));
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border: 3px solid var(--color-secondary);
+        }
+        .curiosity-box {
+            background: #fff9e6;
+            border: 3px dashed var(--color-secondary);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        .curiosity-box h4 {
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .celebration-box {
+            background: linear-gradient(135deg, #fff0f0, #ffe4e1);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border: 3px solid #d2691e;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>Alonsotegi Sustraiak</h1>
+                <p class="nav-subtitle">Memoria Histórica</p>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="cronologia.html">Cronología</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="entonces-ahora.html">Entonces y Ahora</a></li>
+                <li><a href="articulos.html" class="active">Artículos</a></li>
+                <li><a href="colabora.html">Colabora</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <article class="article-detail">
+        <header class="article-header">
+            <h1 class="article-title">Zamundi: El Monte de Fuego</h1>
+            <div class="article-meta-info">
+                <span>🏔️ Patrimonio</span>
+                <span>⛏️ Minería</span>
+                <span>⛪ Cultura</span>
+                <span>📖 10 min de lectura</span>
+            </div>
+        </header>
+
+        <div class="article-body">
+            <p>
+                En lo alto de una abrupta loma caliza, entre las cicatrices de un pasado minero y las vistas privilegiadas del valle del Kadagua, se encuentra uno de los barrios más singulares de Alonsotegi. Zamundi no es solo un lugar en el mapa: es un testimonio vivo de la relación entre nuestra gente, la montaña y el fuego que dio nombre a este rincón especial.
+            </p>
+
+            <p>
+                Entre las ermitas de Alonsotegi hay una muy particular, nacida del anhelo de un grupo de vecinos en este barrio de marcado carácter minero. Su historia está entrelazada con la del propio Zamundi, un lugar donde la tranquilidad solo se altera cada 22 de mayo, cuando la festividad de Santa Quiteria devuelve la vida a este pequeño núcleo.
+            </p>
+
+            <p>
+                Hoy, pocas casas, una ermita y un área recreativa conforman este barrio singular. Pero las huellas del pasado están por todas partes: bocaminas, escombreras, restos de lavaderos de mineral y curiosas formaciones kársticas que nos recuerdan que Zamundi fue, durante décadas, un corazón palpitante de la actividad extractiva de nuestro municipio.
+            </p>
+
+            <h3>Un Barrio con Vistas al Valle</h3>
+
+            <p>
+                Zamundi se nos aparece frente a nosotros en una elevada posición que le otorga el privilegio de disfrutar de bonitas vistas sobre el valle del Kadagua. La abrupta loma caliza nos indica inmediatamente que estamos llegando al antiguo barrio minero.
+            </p>
+
+            <p>
+                Esta ubicación estratégica no es casual. La ladera sur de la cordillera, con su exposición solar privilegiada, convirtió a Zamundi en un paraje especialmente soleado. Esta característica no solo definió su paisaje, sino que marcó profundamente las costumbres y economía de sus habitantes durante siglos.
+            </p>
+
+            <div class="highlight-box">
+                <p style="font-size: 1.2rem; font-weight: 600; color: var(--color-primary);">
+                    📍 Ubicación: Ladera sur de la cordillera de Ganekogorta
+                </p>
+                <p style="margin-top: 1rem;">
+                    El barrio de Zamundi se encuentra en el entorno de Peñas Blancas, una zona que conserva numerosas huellas de la actividad minera que ocupó la zona durante décadas. Las formaciones kársticas del terreno calizo añaden un valor geológico excepcional al patrimonio natural del lugar.
+                </p>
+            </div>
+
+            <h3>El Misterio del Nombre: Sumendi, el Monte de Fuego</h3>
+
+            <p>
+                La toponimia de Zamundi nos cuenta una historia fascinante de transformación lingüística. Estudiando la evolución del nombre, descubrimos que ha sufrido notables modificaciones a lo largo de los siglos. Los vecinos más antiguos de la zona han conservado en su memoria oral una teoría reveladora: el nombre original podría haber sido <strong>Sumendi</strong>, que en euskera significa literalmente "monte de fuego".
+            </p>
+
+            <div class="etymology-box">
+                <h4>🔥 Las Tres Teorías del Fuego</h4>
+                
+                <div class="etymology-version">
+                    <h5>1. El Monte Dorado</h5>
+                    <p>
+                        La ubicación privilegiada en la ladera sur favoreció las plantaciones de cerezos y pavías de gran calidad. En determinadas épocas del año, estos árboles frutales tapizaban el monte de colores dorados y rojizos que, vistos desde lejos, simulaban un monte en llamas. El espectáculo visual de los cerezales en flor o en fruto debió ser tan impactante que marcó la identidad del lugar.
+                    </p>
+                </div>
+
+                <div class="etymology-version">
+                    <h5>2. Las Carboneras de Irauregi</h5>
+                    <p>
+                        Existió en Zamundi un espeso bortal (bosque) que se utilizaba para crear carbón vegetal destinado a la ferrería existente en Irauregi. Las numerosas carboneras que funcionaban en el monte, con sus columnas de humo elevándose constantemente, hacían parecer desde la lejanía un verdadero monte de fuego. El carbón vegetal era esencial para alimentar los hornos de la ferrería, creando así un vínculo económico fundamental.
+                    </p>
+                </div>
+
+                <div class="etymology-version">
+                    <h5>3. Las Setas de Quemada</h5>
+                    <p>
+                        Los vecinos también practicaban la quema controlada del bortal para conseguir las preciadas "setas de quemada". Esta técnica tradicional, que implicaba incendios controlados periódicos, reforzaría la imagen del monte ardiendo y justificaría plenamente el nombre de Sumendi.
+                    </p>
+                </div>
+
+                <p style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 2px solid var(--color-secondary); font-style: italic; color: var(--color-text-light);">
+                    Estas tres explicaciones no son excluyentes. Es muy probable que las tres actividades convivieran en diferentes épocas, reforzando entre todas ellas la imagen y el nombre del "monte de fuego".
+                </p>
+            </div>
+
+            <div class="curiosity-box">
+                <h4>🔤 Lingüística: De Sumendi a Zamundi</h4>
+                <p>
+                    El sufijo <strong>-di</strong> que aparece al final de la palabra original denota abundancia cuando se asocia con plantas. El cambio de la <em>i</em> final en <em>e</em> (que aparece en la documentación histórica pero que no llegó a realizarse completamente) es consecuencia de la fonética castellana, que tiende a cambiar <em>-i</em> por <em>-e</em> en posición final post-tónica.
+                </p>
+                <p style="margin-top: 1rem;">
+                    La evolución <strong>Sumendi → Samundi → Zamundi</strong> refleja la castellanización progresiva del topónimo a lo largo de los siglos, un proceso común en muchos nombres vascos de la zona.
+                </p>
+            </div>
+
+            <h3>La Memoria Documental: 400 Años de Historia Escrita</h3>
+
+            <p>
+                Los archivos históricos nos permiten rastrear la evolución del topónimo de Zamundi a lo largo de más de cuatro siglos. Cada documento es una ventana al pasado, que nos muestra no solo la transformación del nombre, sino también la vida económica y social del barrio.
+            </p>
+
+            <div class="timeline-docs">
+                <h4>📜 Evolución Documental del Topónimo (1557-1864)</h4>
+                
+                <div class="doc-entry">
+                    <span class="doc-year">1557</span> – <strong>Samunde</strong> · Lugar (A.F.B. 1 246-10)
+                </div>
+                
+                <div class="doc-entry">
+                    <span class="doc-year">1598</span> – <strong>Samunde</strong> · Lugar (Leg. 3217 r y 3217 nº 3)
+                </div>
+                
+                <div class="doc-entry">
+                    <span class="doc-year">1615</span> – <strong>Zamunde</strong> · Monte (A.H.P.B. 1 3104)
+                </div>
+                
+                <div class="doc-entry">
+                    <span class="doc-year">1724</span> – <strong>Zamunde</strong> · Lugar (A.F.B. 1 1888, nº 3)
+                </div>
+                
+                <div class="doc-entry">
+                    <span class="doc-year">1736</span> – <strong>Zamundi</strong> · Casería (A.F.B. Leg. 964-9)<br>
+                    <em style="font-family: inherit; font-size: 0.9rem; color: var(--color-text-light); display: block; margin-top: 0.5rem;">
+                        "Por la mitad de la Casería de Zamundi..." – Propiedad del Marqués de Paredes. La mitad de la casería rentaba anualmente 187 reales.
+                    </em>
+                </div>
+                
+                <div class="doc-entry">
+                    <span class="doc-year">1860-1865</span> – <strong>Zamundi</strong> · Población (A.M.B. Legajo 7-B-1)<br>
+                    <em style="font-family: inherit; font-size: 0.9rem; color: var(--color-text-light); display: block; margin-top: 0.5rem;">
+                        Núcleo de población comprendida en el barrio de Irauregi en el nomenclátor de Barakaldo. Distante 10.025 metros del Ayuntamiento. Constaba de 2 caseríos.
+                    </em>
+                </div>
+                
+                <div class="doc-entry">
+                    <span class="doc-year">1864</span> – <strong>Samundi</strong> · Bortal, Casa con terreno, Mina (R.P.B. Fincas Rústicas)<br>
+                    <em style="font-family: inherit; font-size: 0.9rem; color: var(--color-text-light); display: block; margin-top: 0.5rem;">
+                        "Linda al Norte el Monte de Castaneda, al Sur con Campo para Samundi"<br>
+                        "Linda al Norte con Camino para Sarachu, al Sur con El Riachuelo de Samundi"
+                    </em>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <p style="font-weight: 600; color: var(--color-primary); font-size: 1.1rem;">💡 Curiosidad Toponímica</p>
+                <p style="margin-top: 1rem;">
+                    Los testimonios orales recogidos del grupo de vecinos reflejan la rica tradición de conservación de los nombres locales. En sus conversaciones, los vecinos trazaban un mapa mental del barrio: "Torregoiko, es seguido de Sasia (donde estamos), y tirando hacia Samundi (es) Goikoetxea. La siguiente casa, que ya está, se llama Atxuri, ahora son huertas. Siguiendo para arriba, donde vive Julio Otaola y el carpintero Bideguren, eso se llama Barrionuevo..."
+                </p>
+                <p style="margin-top: 1rem;">
+                    Esta memoria oral es un tesoro que debemos preservar: cada nombre es una historia, cada casa un capítulo de nuestra identidad compartida.
+                </p>
+            </div>
+
+            <h3>El Legado Minero: Cuando Zamundi Respiraba Mineral</h3>
+
+            <p>
+                El patrimonio industrial de Zamundi es imponente. Durante décadas, este barrio fue uno de los centros neurálgicos de la actividad extractiva de Alonsotegi. Las minas de hierro que perforaron estas montañas no solo dejaron huellas en el paisaje: forjaron el carácter de una comunidad obrera unida por el trabajo duro en las entrañas de la tierra.
+            </p>
+
+            <div class="mining-heritage">
+                <h4 style="color: var(--color-primary); margin-bottom: 1.5rem; font-size: 1.5rem;">⛏️ Patrimonio Minero de Zamundi</h4>
+                
+                <p style="font-weight: 600; margin-bottom: 1rem;">Elementos conservados del pasado minero:</p>
+                
+                <ul style="list-style: none; padding-left: 0;">
+                    <li style="padding: 0.8rem; margin: 0.5rem 0; background: white; border-radius: 5px; border-left: 4px solid var(--color-accent);">
+                        <strong>→ Bocaminas:</strong> Entradas a las antiguas galerías que penetraban en la montaña
+                    </li>
+                    <li style="padding: 0.8rem; margin: 0.5rem 0; background: white; border-radius: 5px; border-left: 4px solid var(--color-accent);">
+                        <strong>→ Escombreras:</strong> Montículos de roca estéril extraída durante la explotación
+                    </li>
+                    <li style="padding: 0.8rem; margin: 0.5rem 0; background: white; border-radius: 5px; border-left: 4px solid var(--color-accent);">
+                        <strong>→ Lavaderos de mineral:</strong> Instalaciones donde se separaba el hierro de la ganga
+                    </li>
+                    <li style="padding: 0.8rem; margin: 0.5rem 0; background: white; border-radius: 5px; border-left: 4px solid var(--color-accent);">
+                        <strong>→ Formaciones kársticas:</strong> Curiosas estructuras geológicas de la roca caliza
+                    </li>
+                    <li style="padding: 0.8rem; margin: 0.5rem 0; background: white; border-radius: 5px; border-left: 4px solid var(--color-accent);">
+                        <strong>→ Camino a Peñas Blancas:</strong> Antigua ruta de acceso a las explotaciones
+                    </li>
+                </ul>
+
+                <p style="margin-top: 1.5rem; font-style: italic; color: var(--color-text-light);">
+                    Este patrimonio industrial merece protección y puesta en valor. Las minas de Zamundi forman parte de la red de explotaciones que convirtieron a Bizkaia en una potencia siderúrgica durante el siglo XIX y principios del XX.
+                </p>
+            </div>
+
+            <h3>La Ermita de Santa Quiteria: Fe en el Monte Minero</h3>
+
+            <p>
+                En este barrio de marcado carácter industrial nació una ermita muy particular. No fue construida por orden de un señor feudal ni por mandato eclesiástico: fue el anhelo de un grupo de vecinos mineros lo que levantó este pequeño templo dedicado a Santa Quiteria.
+            </p>
+
+            <div class="ermita-section">
+                <h4 style="color: var(--color-primary); font-size: 1.6rem; margin-bottom: 1rem;">⛪ La Ermita de Santa Quiteria</h4>
+                
+                <p>
+                    La ermita de Zamundi representa algo más que un edificio religioso: es el símbolo de una comunidad que, en medio del trabajo duro y la dureza del paisaje minero, encontró en la fe un punto de encuentro y cohesión social. Santa Quiteria, patrona del barrio, se convirtió en protectora de los mineros y sus familias.
+                </p>
+
+                <p style="margin-top: 1.5rem;">
+                    Aunque no disponemos de la fecha exacta de su construcción, la tradición oral y la documentación disponible sugieren que fue erigida en algún momento de finales del siglo XIX o principios del XX, coincidiendo con el auge de la actividad minera en la zona.
+                </p>
+
+                <div class="celebration-box" style="margin-top: 2rem;">
+                    <h5 style="color: #d2691e; font-size: 1.3rem; margin-bottom: 1rem;">🎉 La Fiesta de Santa Quiteria</h5>
+                    <p>
+                        Cada <strong>22 de mayo</strong>, la tranquilidad habitual de Zamundi se ve alterada por la celebración de Santa Quiteria. Es el día en que el barrio recupera por unas horas el bullicio que tuvo en su época minera. Vecinos, antiguos residentes y visitantes se reúnen en torno a la ermita para celebrar la romería tradicional.
+                    </p>
+                    <p style="margin-top: 1rem;">
+                        La festividad incluye la tradicional misa en la ermita, seguida de una comida popular en el área recreativa adyacente. Es un momento de reencuentro, de memoria compartida y de celebración de las raíces que nos unen a este monte especial.
+                    </p>
+                </div>
+            </div>
+
+            <h3>Zamundi Hoy: Entre la Memoria y el Futuro</h3>
+
+            <p>
+                En la actualidad, Zamundi es un barrio tranquilo compuesto por la ermita, una pequeña área recreativa y unas pocas casas. La actividad minera es ya un recuerdo, las carboneras se apagaron hace décadas, y los cerezos que tapizaban la ladera han dejado paso a otro tipo de vegetación. Pero el espíritu del lugar permanece intacto.
+            </p>
+
+            <p>
+                Las bocaminas siguen ahí, como monumentos silenciosos a la memoria de quienes trabajaron en ellas. Las escombreras nos recuerdan que esta montaña dio su riqueza mineral para alimentar las fundiciones de Bizkaia. Y la ermita continúa siendo el corazón espiritual de un barrio que, aunque pequeño, conserva una identidad fuerte y diferenciada.
+            </p>
+
+            <div class="highlight-box" style="background: linear-gradient(135deg, var(--color-sepia), var(--color-bg-alt)); margin-top: 3rem;">
+                <h4 style="color: var(--color-primary); font-size: 1.4rem; margin-bottom: 1rem;">🌄 Zamundi en el Siglo XXI</h4>
+                <p>
+                    Hoy, Zamundi forma parte de las rutas de senderismo que recorren el entorno de Peñas Blancas y Ganekogorta. Excursionistas y amantes de la naturaleza descubren con asombro el patrimonio minero y las vistas privilegiadas que ofrece este rincón elevado de nuestro municipio.
+                </p>
+                <p style="margin-top: 1rem;">
+                    El área recreativa junto a la ermita se ha convertido en un lugar de esparcimiento familiar, donde las nuevas generaciones juegan sin saber que, bajo sus pies, se extienden kilómetros de galerías excavadas por sus antepasados.
+                </p>
+            </div>
+
+            <div class="highlight-box" style="background: linear-gradient(135deg, #fff8dc, #faebd7); margin-top: 2rem;">
+                <h4 style="color: var(--color-primary); font-size: 1.3rem; margin-bottom: 1rem;">💭 Reflexión Final</h4>
+                <p>
+                    Zamundi, el antiguo Sumendi, sigue siendo un monte de fuego, pero de un fuego distinto. Ya no arden las carboneras ni brillan los cerezos dorados. Pero arde la memoria de un barrio que fue protagonista de la historia industrial de Alonsotegi. Arde la fe de una comunidad que cada 22 de mayo renueva su compromiso con sus raíces. Y arde, sobre todo, el orgullo de pertenecer a un lugar único, un monte que lleva el fuego en su nombre y en su historia.
+                </p>
+                <p style="margin-top: 1.5rem; font-weight: 600; color: var(--color-primary-dark);">
+                    Porque Zamundi no es solo un barrio: es un símbolo de la relación entre nuestra gente, la montaña y el trabajo que nos define. Es, en definitiva, parte esencial de nuestras raíces, de nuestros <em>sustraiak</em>.
+                </p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 4rem; padding: 2rem; background: var(--color-bg-alt); border-radius: 10px;">
+            <h3 style="color: var(--color-primary); margin-bottom: 1rem;">📸 ¿Tienes fotos antiguas de Zamundi?</h3>
+            <p style="color: var(--color-text-light); margin-bottom: 1.5rem;">
+                Ayúdanos a completar la memoria visual de este barrio tan especial. Buscamos especialmente fotografías de la época minera, de las antiguas carboneras, de los cerezales en flor, o de las celebraciones de Santa Quiteria de décadas pasadas.
+            </p>
+            <a href="colabora.html" class="btn btn-primary" style="display: inline-block; margin-top: 1rem;">Colabora con nosotros</a>
+        </div>
+
+        <div style="margin-top: 3rem; padding: 2rem; background: var(--color-sepia); border-radius: 10px; border-left: 5px solid var(--color-primary);">
+            <h4 style="color: var(--color-primary); margin-bottom: 1rem;">📚 Fuentes Consultadas</h4>
+            <ul style="line-height: 2; color: var(--color-text-light);">
+                <li>Archivo Foral de Bizkaia (A.F.B.) - Referencias documentales 1557-1736</li>
+                <li>Archivo Histórico Provincial de Bizkaia (A.H.P.B.) - Documentación siglo XVII</li>
+                <li>Archivo Municipal de Barakaldo (A.M.B.) - Nomenclátor 1860-1865</li>
+                <li>Registro de la Propiedad de Bizkaia (R.P.B.) - Fincas Rústicas 1864</li>
+                <li>Testimonios orales de vecinos de Zamundi (recogidos en archivos municipales)</li>
+                <li>Blog "Alonsotegi Sustraiak" - Investigación toponímica y memoria oral</li>
+            </ul>
+            <p style="margin-top: 1.5rem; font-style: italic; color: var(--color-text-light); font-size: 0.95rem;">
+                Este artículo se basa en la investigación publicada originalmente en el blog Alonsotegi Sustraiak, complementada con documentación de archivo y testimonios de la tradición oral local.
+            </p>
+        </div>
+
+        <div style="text-align: center; margin-top: 4rem; padding: 2rem; background: var(--color-bg-alt); border-radius: 10px;">
+            <a href="articulos.html" class="btn btn-primary">← Volver a Artículos</a>
+        </div>
+    </article>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Alonsotegi Sustraiak</h3>
+                    <p>Recuperando y compartiendo la memoria histórica de nuestro pueblo.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="cronologia.html">Cronología</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                        <li><a href="articulos.html">Artículos</a></li>
+                        <li><a href="colabora.html">Colabora</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p>¿Tienes fotos o historias que compartir?</p>
+                    <a href="colabora.html" class="btn btn-secondary">Colabora con nosotros</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Alonsotegi Sustraiak. Proyecto de recuperación de memoria histórica.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
