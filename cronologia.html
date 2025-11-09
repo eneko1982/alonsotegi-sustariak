@@ -3,14 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Cronología histórica de Alonsotegi - Recorrido por los momentos clave de nuestra historia">
+    <meta name="description" content="Cronología histórica de Alonsotegi">
     <title>Cronología - Alonsotegi Sustraiak</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/desing-system.css">
-    <link rel="stylesheet" href="css/timeline-horizontal.css">
+    <link rel="stylesheet" href="css/design-system.css">
+
+    <style>
+        /* ESTILOS ADICIONALES PARA TIMELINE MEJORADA */
+        .timeline-item {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .timeline-item.fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* COLORES POR CATEGORÍA */
+        .timeline-item[data-category="politico"] .timeline-marker {
+            background: #8B4513;
+        }
+        .timeline-item[data-category="politico"] .timeline-category {
+            background: #8B4513;
+        }
+        .timeline-item[data-category="politico"] .timeline-content {
+            border-left: 4px solid #8B4513;
+        }
+        
+        .timeline-item[data-category="industrial"] .timeline-marker {
+            background: #CD853F;
+        }
+        .timeline-item[data-category="industrial"] .timeline-category {
+            background: #CD853F;
+        }
+        .timeline-item[data-category="industrial"] .timeline-content {
+            border-left: 4px solid #CD853F;
+        }
+        
+        .timeline-item[data-category="tragedia"] .timeline-marker {
+            background: #8B0000;
+        }
+        .timeline-item[data-category="tragedia"] .timeline-category {
+            background: #8B0000;
+        }
+        .timeline-item[data-category="tragedia"] .timeline-content {
+            border-left: 4px solid #8B0000;
+        }
+        
+        /* ICONOS MÁS GRANDES */
+        .timeline-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+    </style>
 </head>
 <body>
-    <!-- Navegación -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
@@ -31,183 +80,138 @@
         </div>
     </nav>
 
-    <!-- Introducción -->
-    <section class="intro-section" style="padding-bottom: var(--spacing-lg);">
+    <section class="intro-section">
         <div class="container">
             <h2 class="section-title">Línea de Tiempo</h2>
             <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; color: var(--color-text-light); font-size: 1.1rem;">
                 Un recorrido cronológico por los momentos que forjaron la identidad de Alonsotegi, desde sus orígenes medievales hasta su consolidación como municipio independiente.
             </p>
-            
-            <!-- Filtros -->
             <div class="gallery-filters">
-                <button class="filter-btn timeline-filter-btn active" data-filter="all">
-                    📅 Todos
-                </button>
-                <button class="filter-btn timeline-filter-btn" data-filter="politico">
-                    🏛️ Político
-                </button>
-                <button class="filter-btn timeline-filter-btn" data-filter="industrial">
-                    🏭 Industrial
-                </button>
-                <button class="filter-btn timeline-filter-btn" data-filter="social">
-                    👥 Social
-                </button>
-                <button class="filter-btn timeline-filter-btn" data-filter="tragedia">
-                    ⚠️ Tragedia
-                </button>
+                <button class="filter-btn timeline-filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn timeline-filter-btn" data-filter="politico">🏛️ Político</button>
+                <button class="filter-btn timeline-filter-btn" data-filter="industrial">🏭 Industrial</button>
+                <button class="filter-btn timeline-filter-btn" data-filter="social">👥 Social</button>
+                <button class="filter-btn timeline-filter-btn" data-filter="tragedia">⚠️ Tragedia</button>
             </div>
         </div>
     </section>
 
-    <!-- Timeline Horizontal -->
-    <section class="timeline-horizontal-container">
+    <section class="timeline-container">
         <div class="container">
-            <!-- Wrapper con scroll horizontal -->
-            <div class="timeline-horizontal-wrapper">
-                <div class="timeline-horizontal">
-                    
-                    <!-- Item 1: Siglo XIV -->
-                    <div class="timeline-horizontal-item" data-category="politico">
-                        <div class="timeline-horizontal-marker"></div>
-                        <div class="timeline-horizontal-content">
-                            <span class="timeline-horizontal-icon">🏰</span>
-                            <div class="timeline-horizontal-year">Siglo XIV</div>
-                            <h3>Casas-Torre de Loizaga y Zamundi</h3>
-                            <p>Edificación de las Casas-Torre de Loizaga y Zamundi, símbolos del poder feudal y primeros núcleos de población documentados en el valle.</p>
-                            <span class="timeline-horizontal-category">Político</span>
-                        </div>
+            <div class="timeline">
+                <div class="timeline-item" data-category="politico" data-searchable>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-icon">🏰</span>
+                        <div class="timeline-year">Siglo XIV</div>
+                        <h3>Casas-Torre de Loizaga y Zamundi</h3>
+                        <p>Edificación de las Casas-Torre de Loizaga y Zamundi, símbolos del poder feudal y primeros núcleos de población documentados en el valle.</p>
+                        <span class="timeline-category">Político</span>
                     </div>
+                </div>
 
-                    <!-- Item 2: Siglo XVI -->
-                    <div class="timeline-horizontal-item" data-category="industrial">
-                        <div class="timeline-horizontal-marker"></div>
-                        <div class="timeline-horizontal-content">
-                            <span class="timeline-horizontal-icon">⚒️</span>
-                            <div class="timeline-horizontal-year">Siglo XVI</div>
-                            <h3>Auge de las Ferrerías</h3>
-                            <p>Auge de las ferrerías tradicionales como la de Arbuio. El río Kadagua se usa como fuerza motriz para una próspera industria pre-moderna del hierro.</p>
-                            <span class="timeline-horizontal-category">Industrial</span>
-                        </div>
+                <div class="timeline-item" data-category="industrial" data-searchable>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-icon">⚒️</span>
+                        <div class="timeline-year">Siglo XVI</div>
+                        <h3>Auge de las Ferrerías</h3>
+                        <p>Auge de las ferrerías tradicionales como la de Arbuio. El río Kadagua se usa como fuerza motriz para una próspera industria pre-moderna del hierro.</p>
+                        <span class="timeline-category">Industrial</span>
                     </div>
+                </div>
 
-                    <!-- Item 3: 1892 -->
-                    <div class="timeline-horizontal-item" data-category="industrial">
-                        <div class="timeline-horizontal-marker"></div>
-                        <div class="timeline-horizontal-content">
-                            <span class="timeline-horizontal-icon">🏭</span>
-                            <div class="timeline-horizontal-year">1892</div>
-                            <h3>Fundación de "Goyarrola"</h3>
-                            <p>Fundación de la fábrica de Cementos Portland "Goyarrola". Es el pistoletazo de salida de la gran revolución industrial en Alonsotegi, atrayendo miles de trabajadores.</p>
-                            <span class="timeline-horizontal-category">Industrial</span>
-                        </div>
+                <div class="timeline-item" data-category="industrial" data-searchable>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-icon">🏭</span>
+                        <div class="timeline-year">1892</div>
+                        <h3>Fundación de "Goyarrola"</h3>
+                        <p>Fundación de la fábrica de Cementos Portland "Goyarrola". Es el pistoletazo de salida de la gran revolución industrial en Alonsotegi, atrayendo miles de trabajadores.</p>
+                        <span class="timeline-category">Industrial</span>
                     </div>
+                </div>
 
-                    <!-- Item 4: 1894 -->
-                    <div class="timeline-horizontal-item" data-category="industrial">
-                        <div class="timeline-horizontal-marker"></div>
-                        <div class="timeline-horizontal-content">
-                            <span class="timeline-horizontal-icon">🚂</span>
-                            <div class="timeline-horizontal-year">1894</div>
-                            <h3>Ferrocarril de La Robla</h3>
-                            <p>Inauguración del Ferrocarril de La Robla. Esta línea de vía estrecha se convierte en la arteria vital del pueblo, sacando mineral y cemento y conectando el valle con Bilbao.</p>
-                            <span class="timeline-horizontal-category">Industrial</span>
-                        </div>
+                <div class="timeline-item" data-category="industrial" data-searchable>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-icon">🚂</span>
+                        <div class="timeline-year">1894</div>
+                        <h3>Ferrocarril de La Robla</h3>
+                        <p>Inauguración del Ferrocarril de La Robla. Esta línea de vía estrecha se convierte en la arteria vital del pueblo, sacando mineral y cemento y conectando el valle con Bilbao.</p>
+                        <span class="timeline-category">Industrial</span>
                     </div>
+                </div>
 
-                    <!-- Item 5: 1902 -->
-                    <div class="timeline-horizontal-item" data-category="industrial">
-                        <div class="timeline-horizontal-marker"></div>
-                        <div class="timeline-horizontal-content">
-                            <span class="timeline-horizontal-icon">⚡</span>
-                            <div class="timeline-horizontal-year">1902</div>
-                            <h3>Central Hidroeléctrica</h3>
-                            <p>Puesta en marcha de la Central Hidroeléctrica de "La Papelera" en Iráuregui, consolidando el valle como un enclave energético e industrial clave.</p>
-                            <span class="timeline-horizontal-category">Industrial</span>
-                        </div>
+                <div class="timeline-item" data-category="industrial" data-searchable>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-icon">⚡</span>
+                        <div class="timeline-year">1902</div>
+                        <h3>Central Hidroeléctrica</h3>
+                        <p>Puesta en marcha de la Central Hidroeléctrica de "La Papelera" en Iráuregui, consolidando el valle como un enclave energético e industrial clave.</p>
+                        <span class="timeline-category">Industrial</span>
                     </div>
+                </div>
 
-                    <!-- Item 6: 1928 -->
-                    <div class="timeline-horizontal-item" data-category="politico">
-                        <div class="timeline-horizontal-marker"></div>
-                        <div class="timeline-horizontal-content">
-                            <span class="timeline-horizontal-icon">📜</span>
-                            <div class="timeline-horizontal-year">1928</div>
-                            <h3>Primer Intento de Desanexión</h3>
-                            <p>Primer intento documentado de desanexión. Un grupo de vecinos de Alonsotegi (entonces barrio de Barakaldo) solicita la segregación, mostrando un temprano deseo de autogobierno.</p>
-                            <span class="timeline-horizontal-category">Político</span>
-                        </div>
+                <div class="timeline-item" data-category="politico" data-searchable>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-icon">📜</span>
+                        <div class="timeline-year">1928</div>
+                        <h3>Primer Intento de Desanexión</h3>
+                        <p>Primer intento documentado de desanexión. Un grupo de vecinos de Alonsotegi (entonces barrio de Barakaldo) solicita la segregación, mostrando un temprano deseo de autogobierno.</p>
+                        <span class="timeline-category">Político</span>
                     </div>
+                </div>
 
-                    <!-- Item 7: 1937 -->
-                    <div class="timeline-horizontal-item" data-category="tragedia">
-                        <div class="timeline-horizontal-marker"></div>
-                        <div class="timeline-horizontal-content">
-                            <span class="timeline-horizontal-icon">⚔️</span>
-                            <div class="timeline-horizontal-year">1937</div>
-                            <h3>Guerra Civil: Cinturón de Hierro</h3>
-                            <p>El "Cinturón de Hierro" de Bilbao, que pasaba por las cimas de Alonsotegi, es roto. La caída de esta línea defensiva precipita la toma de la comarca y de Bilbao.</p>
-                            <span class="timeline-horizontal-category">Tragedia</span>
-                        </div>
+                <div class="timeline-item" data-category="tragedia" data-searchable>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-icon">⚔️</span>
+                        <div class="timeline-year">1937</div>
+                        <h3>Guerra Civil: Cinturón de Hierro</h3>
+                        <p>El "Cinturón de Hierro" de Bilbao, que pasaba por las cimas de Alonsotegi, es roto. La caída de esta línea defensiva precipita la toma de la comarca y de Bilbao.</p>
+                        <span class="timeline-category">Tragedia</span>
                     </div>
+                </div>
 
-                    <!-- Item 8: 1983 -->
-                    <div class="timeline-horizontal-item" data-category="tragedia">
-                        <div class="timeline-horizontal-marker"></div>
-                        <div class="timeline-horizontal-content">
-                            <span class="timeline-horizontal-icon">🌊</span>
-                            <div class="timeline-horizontal-year">1983</div>
-                            <h3>Las Inundaciones del 26 de Agosto</h3>
-                            <p>Una riada histórica del Kadagua devasta el pueblo, arrasando puentes, fábricas y viviendas. Es la mayor tragedia de su historia moderna y un punto de inflexión.</p>
-                            <span class="timeline-horizontal-category">Tragedia</span>
-                        </div>
+                <div class="timeline-item" data-category="tragedia" data-searchable>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-icon">🌊</span>
+                        <div class="timeline-year">1983</div>
+                        <h3>Las Inundaciones del 26 de Agosto</h3>
+                        <p>Una riada histórica del Kadagua devasta el pueblo, arrasando puentes, fábricas y viviendas. Es la mayor tragedia de su historia moderna y un punto de inflexión.</p>
+                        <span class="timeline-category">Tragedia</span>
                     </div>
+                </div>
 
-                    <!-- Item 9: 1991 -->
-                    <div class="timeline-horizontal-item" data-category="politico">
-                        <div class="timeline-horizontal-marker"></div>
-                        <div class="timeline-horizontal-content">
-                            <span class="timeline-horizontal-icon">🏛️</span>
-                            <div class="timeline-horizontal-year">1991</div>
-                            <h3>Nacimiento del Municipio 111</h3>
-                            <p>1 de enero de 1991: Nace el municipio 111 de Bizkaia. Tras décadas de lucha vecinal, Alonsotegi se desanexiona de Barakaldo (e Iráuregui de Arrigorriaga) para formar su propio ayuntamiento.</p>
-                            <span class="timeline-horizontal-category">Político</span>
-                        </div>
+                <div class="timeline-item" data-category="politico" data-searchable>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-icon">🏛️</span>
+                        <div class="timeline-year">1991</div>
+                        <h3>Nacimiento del Municipio 111</h3>
+                        <p>1 de enero de 1991: Nace el municipio 111 de Bizkaia. Tras décadas de lucha vecinal, Alonsotegi se desanexiona de Barakaldo (e Iráuregui de Arrigorriaga) para formar su propio ayuntamiento.</p>
+                        <span class="timeline-category">Político</span>
                     </div>
+                </div>
 
-                    <!-- Item 10: 2009 -->
-                    <div class="timeline-horizontal-item" data-category="industrial">
-                        <div class="timeline-horizontal-marker"></div>
-                        <div class="timeline-horizontal-content">
-                            <span class="timeline-horizontal-icon">🏚️</span>
-                            <div class="timeline-horizontal-year">2009</div>
-                            <h3>Cierre de Cementos Rezola</h3>
-                            <p>Cierre definitivo de "Cementos Rezola" (la histórica Goyarrola). Fin de una era industrial que marcó profundamente la identidad del pueblo.</p>
-                            <span class="timeline-horizontal-category">Industrial</span>
-                        </div>
+                <div class="timeline-item" data-category="industrial" data-searchable>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-icon">🏚️</span>
+                        <div class="timeline-year">2009</div>
+                        <h3>Cierre de Cementos Rezola</h3>
+                        <p>Cierre definitivo de "Cementos Rezola" (la histórica Goyarrola). Fin de una era industrial que marcó profundamente la identidad del pueblo.</p>
+                        <span class="timeline-category">Industrial</span>
                     </div>
-
                 </div>
             </div>
-
-            <!-- Controles de navegación -->
-            <div class="timeline-nav">
-                <button class="timeline-nav-btn" id="timeline-prev" aria-label="Anterior">
-                    ←
-                </button>
-                <button class="timeline-nav-btn" id="timeline-next" aria-label="Siguiente">
-                    →
-                </button>
-            </div>
-
-            <!-- Indicador de scroll (solo PC) -->
-            <div class="timeline-scroll-indicator">
-                ← Desliza para explorar la historia →
-            </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -227,7 +231,7 @@
                 <div class="footer-section">
                     <h4>Contacto</h4>
                     <p>¿Tienes fotos o historias que compartir?</p>
-                    <a href="colabora.html" class="btn-v2 btn-v2--secondary">Colabora con nosotros</a>
+                    <a href="colabora.html" class="btn btn-secondary">Colabora con nosotros</a>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -235,99 +239,25 @@
             </div>
         </div>
     </footer>
-
-    <!-- JavaScript -->
+    
     <script src="js/main.js"></script>
     <script>
-        // ============================================
-        // TIMELINE HORIZONTAL - FUNCIONALIDAD
-        // ============================================
+        // ANIMACIÓN FADE-IN AL HACER SCROLL
+        const observerOptions = {
+            threshold: 0.2,
+            rootMargin: '0px 0px -100px 0px'
+        };
 
-        document.addEventListener('DOMContentLoaded', function() {
-            const wrapper = document.querySelector('.timeline-horizontal-wrapper');
-            const timeline = document.querySelector('.timeline-horizontal');
-            const items = document.querySelectorAll('.timeline-horizontal-item');
-            const prevBtn = document.getElementById('timeline-prev');
-            const nextBtn = document.getElementById('timeline-next');
-            const filterBtns = document.querySelectorAll('.timeline-filter-btn');
-
-            // === NAVEGACIÓN CON BOTONES ===
-            if (prevBtn && nextBtn && wrapper) {
-                const scrollAmount = 400;
-
-                prevBtn.addEventListener('click', () => {
-                    wrapper.scrollBy({
-                        left: -scrollAmount,
-                        behavior: 'smooth'
-                    });
-                });
-
-                nextBtn.addEventListener('click', () => {
-                    wrapper.scrollBy({
-                        left: scrollAmount,
-                        behavior: 'smooth'
-                    });
-                });
-
-                // Actualizar estado de botones según posición
-                wrapper.addEventListener('scroll', () => {
-                    const maxScroll = wrapper.scrollWidth - wrapper.clientWidth;
-                    
-                    prevBtn.disabled = wrapper.scrollLeft <= 0;
-                    nextBtn.disabled = wrapper.scrollLeft >= maxScroll - 10;
-                });
-
-                // Estado inicial
-                prevBtn.disabled = true;
-            }
-
-            // === FILTROS ===
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const filter = btn.dataset.filter;
-
-                    // Actualizar botón activo
-                    filterBtns.forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
-
-                    // Filtrar items
-                    items.forEach(item => {
-                        const category = item.dataset.category;
-
-                        if (filter === 'all' || category === filter) {
-                            item.style.display = 'block';
-                            item.classList.remove('filtered-out');
-                        } else {
-                            item.classList.add('filtered-out');
-                            // No ocultamos completamente para mantener el scroll
-                        }
-                    });
-
-                    // Scroll al inicio después de filtrar
-                    if (wrapper) {
-                        wrapper.scrollTo({
-                            left: 0,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
             });
+        }, observerOptions);
 
-            // === NAVEGACIÓN CON TECLADO ===
-            if (wrapper) {
-                wrapper.addEventListener('keydown', (e) => {
-                    if (e.key === 'ArrowLeft') {
-                        wrapper.scrollBy({ left: -300, behavior: 'smooth' });
-                    } else if (e.key === 'ArrowRight') {
-                        wrapper.scrollBy({ left: 300, behavior: 'smooth' });
-                    }
-                });
-            }
-
-            // === HACER WRAPPER FOCUSEABLE ===
-            if (wrapper) {
-                wrapper.setAttribute('tabindex', '0');
-            }
+        document.querySelectorAll('.timeline-item').forEach(item => {
+            observer.observe(item);
         });
     </script>
 </body>
