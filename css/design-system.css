@@ -1,15 +1,10 @@
 /* ============================================
-   ALONSOTEGI SUSTRAIAK - DESIGN SYSTEM v2.0
+   ALONSOTEGI SUSTRAIAK - DESIGN SYSTEM v2.1
    Sistema de diseño unificado y escalable
    
-   INSTRUCCIONES:
-   - Este archivo EXTIENDE styles.css (no lo reemplaza)
-   - Añadir DESPUÉS de styles.css en el HTML:
-     <link rel="stylesheet" href="css/styles.css">
-     <link rel="stylesheet" href="css/design-system.css">
-   
-   - Uso gradual: puedes ir adoptando las nuevas clases
-   - Compatible con código existente
+   ✅ CORREGIDO: Todos los hovers son consistentes
+   - Solo cambio de color (sin transform/movimiento)
+   - Letras siempre visibles en blanco (!important)
    ============================================ */
 
 /* ============================================
@@ -95,6 +90,7 @@
 
 /* ============================================
    2. SISTEMA DE BOTONES UNIFICADO
+   ✅ HOVER CONSISTENTE: Solo cambio de color
    ============================================ */
 
 /* Base para todos los botones */
@@ -103,7 +99,7 @@
     align-items: center;
     justify-content: center;
     gap: var(--spacing-xs);
-    padding: var(--spacing-xs) var(--spacing-lg);  /* ← REDUCIDO de --spacing-sm */
+    padding: var(--spacing-xs) var(--spacing-lg);
     border-radius: var(--radius-md);
     font-weight: var(--font-weight-semibold);
     font-size: var(--font-size-base);
@@ -119,62 +115,51 @@
 /* Variante Primary (principal) */
 .btn-v2--primary {
     background: var(--color-primary);
-    color: var(--color-white);
+    color: var(--color-white) !important;
     border-color: var(--color-primary);
 }
 
 .btn-v2--primary:hover {
     background: var(--color-primary-dark);
     border-color: var(--color-primary-dark);
-    color: var(--color-white);  /* ← FORZAR COLOR BLANCO */
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
-}
-
-.btn-v2--primary:active {
-    transform: translateY(0);
-    box-shadow: var(--shadow-sm);
+    color: var(--color-white) !important;
 }
 
 /* Variante Secondary */
 .btn-v2--secondary {
     background: var(--color-secondary);
-    color: var(--color-white);
+    color: var(--color-white) !important;
     border-color: var(--color-secondary);
 }
 
 .btn-v2--secondary:hover {
     background: var(--color-accent);
     border-color: var(--color-accent);
-    color: var(--color-white);  /* ← FORZAR COLOR BLANCO */
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+    color: var(--color-white) !important;
 }
 
 /* Variante Outline */
 .btn-v2--outline {
     background: transparent;
-    color: var(--color-primary);
+    color: var(--color-primary) !important;
     border-color: var(--color-primary);
 }
 
 .btn-v2--outline:hover {
     background: var(--color-primary);
-    color: var(--color-white);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+    color: var(--color-white) !important;
 }
 
 /* Variante Ghost (sin borde) */
 .btn-v2--ghost {
     background: transparent;
-    color: var(--color-primary);
+    color: var(--color-primary) !important;
     border-color: transparent;
 }
 
 .btn-v2--ghost:hover {
     background: var(--color-sepia);
-    color: var(--color-primary-dark);
+    color: var(--color-primary-dark) !important;
 }
 
 /* Tamaños de botones */
@@ -543,21 +528,21 @@
 
 /* ============================================
    10. MEJORAS ESPECÍFICAS DETECTADAS
+   ✅ FOOTER BUTTONS: Solo cambio de color
    ============================================ */
 
-/* Fix: Footer buttons consistent hover */
+/* Footer buttons consistent hover (sin movimiento) */
 .footer .btn-secondary,
 .footer .btn-v2--secondary {
     display: inline-block;
-    transition: all var(--duration-normal) var(--ease-in-out);
-    margin-top: var(--spacing-md);  /* ← AÑADIR ESPACIO ARRIBA */
+    transition: background-color var(--duration-normal) var(--ease-in-out),
+                border-color var(--duration-normal) var(--ease-in-out);
+    margin-top: var(--spacing-md);
 }
 
 .footer .btn-secondary:hover,
 .footer .btn-v2--secondary:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
-    color: var(--color-white);  /* ← FORZAR COLOR BLANCO */
+    color: var(--color-white) !important;
 }
 
 /* Fix: Formulario con espaciado al footer */
@@ -567,7 +552,7 @@
 
 /* Fix: Reducir espacio entre hero e intro */
 .intro-section {
-    padding-top: var(--spacing-xl);  /* ← REDUCIDO (antes era 5rem por defecto) */
+    padding-top: var(--spacing-xl);
 }
 
 /* Fix: Layout 4 cards en inicio (2x2 en lugar de 3+1) */
@@ -619,7 +604,7 @@
     width: 100%;
     height: 400px;
     object-fit: cover;
-    object-position: center;  /* ← CENTRAR IMAGEN */
+    object-position: center;
     border-radius: var(--radius-lg);
     filter: sepia(15%);
     transition: filter var(--duration-normal) var(--ease-in-out);
@@ -634,7 +619,7 @@
 }
 
 .latest-article-badge {
-    display: none;  /* ← OCULTAR BADGE "NUEVO" */
+    display: none;
 }
 
 @media (max-width: 768px) {
@@ -643,9 +628,9 @@
     }
     
     .latest-article-card__image {
-        height: 250px;  /* ← REDUCIR ALTURA EN MÓVIL */
+        height: 250px;
         object-fit: cover;
-        object-position: center center;  /* ← FORZAR CENTRADO */
+        object-position: center center;
     }
 }
 
@@ -671,5 +656,5 @@
 }
 
 /* ============================================
-   FIN DEL DESIGN SYSTEM
+   FIN DEL DESIGN SYSTEM v2.1
    ============================================ */
