@@ -7,7 +7,6 @@
     <title>Alonsotegi Sustraiak - Inicio</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/design-system.css">
-
 </head>
 <body>
     <!-- Navegación -->
@@ -42,7 +41,8 @@
             <div class="hero-content">
                 <h2 class="hero-title">Alonsotegi Sustraiak</h2>
                 <p class="hero-subtitle">Para entender quiénes somos, primero debemos conocer de dónde venimos</p>
-                <a href="cronologia.html" class="btn btn-primary">Explora nuestra historia</a>
+                <!-- ✅ CAMBIO: Botón nuevo con btn-v2 -->
+                <a href="cronologia.html" class="btn-v2 btn-v2--primary btn-v2--lg">Explora nuestra historia</a>
             </div>
         </div>
     </section>
@@ -65,6 +65,45 @@
         </div>
     </section>
 
+    <!-- ✅ NUEVO: Sección Último Artículo -->
+    <section class="latest-article-section">
+        <div class="container">
+            <h2 class="section-title">Último Artículo Publicado</h2>
+            
+            <div class="latest-article-card">
+                <img src="images/articulos/inquisidor.png" 
+                     alt="Fray Martín de Coscojales" 
+                     class="latest-article-card__image">
+                
+                <div class="latest-article-card__content">
+                    <span class="latest-article-badge">🆕 NUEVO</span>
+                    
+                    <h3 class="text-3xl font-bold text-primary mb-md">
+                        Fray Martín de Coscojales: Historiador e Inquisidor
+                    </h3>
+                    
+                    <div class="flex gap-md mb-md" style="flex-wrap: wrap; font-size: 0.9rem; color: var(--color-text-light);">
+                        <span>📖 Biografía</span>
+                        <span>🏛️ Siglo XVI</span>
+                        <span>⏱️ 12 min de lectura</span>
+                    </div>
+                    
+                    <p class="text-light leading-relaxed mb-lg">
+                        El primer cronista de Bizkaia nació en Alonsotegi. Consejero de Inquisición, 
+                        autor de "Antigüedades de Vizcaya" y observador perspicaz de las costumbres 
+                        vascas del siglo XVI. La historia de un hijo ilustre que documentó su tierra 
+                        para la posteridad.
+                    </p>
+                    
+                    <a href="articulo-coscojales-historiador.html" 
+                       class="btn-v2 btn-v2--primary">
+                        Leer artículo completo →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Secciones destacadas -->
     <section class="features-section">
         <div class="container">
@@ -74,50 +113,67 @@
                     <div class="feature-icon">📅</div>
                     <h3>Cronología</h3>
                     <p>Viaja a través del tiempo desde el siglo XIV hasta nuestros días</p>
-                    <a href="cronologia.html" class="btn-link">Ver línea temporal →</a>
+                    <!-- ✅ CAMBIO: btn-link mejorado -->
+                    <a href="cronologia.html" class="btn-v2 btn-v2--ghost btn-v2--sm">Ver línea temporal →</a>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">📸</div>
                     <h3>Galería Histórica</h3>
                     <p>Imágenes que cuentan la historia visual de nuestro pueblo</p>
-                    <a href="galeria.html" class="btn-link">Explorar fotos →</a>
+                    <a href="galeria.html" class="btn-v2 btn-v2--ghost btn-v2--sm">Explorar fotos →</a>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🔄</div>
                     <h3>Entonces y Ahora</h3>
                     <p>Compara cómo ha cambiado Alonsotegi a lo largo del tiempo</p>
-                    <a href="entonces-ahora.html" class="btn-link">Ver comparativas →</a>
+                    <a href="entonces-ahora.html" class="btn-v2 btn-v2--ghost btn-v2--sm">Ver comparativas →</a>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">📖</div>
                     <h3>Artículos</h3>
                     <p>Investigaciones profundas sobre nuestra historia local</p>
-                    <a href="articulos.html" class="btn-link">Leer más →</a>
+                    <a href="articulos.html" class="btn-v2 btn-v2--ghost btn-v2--sm">Leer más →</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Hitos destacados -->
+    <!-- ✅ MEJORADO: Hitos destacados (ahora clickeables) -->
     <section class="highlights-section">
         <div class="container">
             <h2 class="section-title">Momentos Clave</h2>
             <div class="highlights-grid">
-                <div class="highlight-card">
+                
+                <!-- Card 1: Goyarrola (clickeable) -->
+                <a href="articulos.html#goyarrola" class="highlight-card" style="text-decoration: none; color: inherit; display: block; cursor: pointer;">
                     <div class="highlight-year">1892</div>
                     <h3>Fundación de Goyarrola</h3>
                     <p>Nace la fábrica de Cementos Portland, inicio de la revolución industrial en el valle.</p>
-                </div>
-                <div class="highlight-card">
+                    <div style="margin-top: 1rem; text-align: center;">
+                        <span class="btn-v2 btn-v2--outline btn-v2--sm">Leer más →</span>
+                    </div>
+                </a>
+                
+                <!-- Card 2: Inundaciones (clickeable) -->
+                <a href="articulos.html#inundaciones" class="highlight-card" style="text-decoration: none; color: inherit; display: block; cursor: pointer;">
                     <div class="highlight-year">1983</div>
                     <h3>Las Inundaciones</h3>
                     <p>Una riada histórica devasta el pueblo, marcando un antes y un después.</p>
-                </div>
-                <div class="highlight-card">
+                    <div style="margin-top: 1rem; text-align: center;">
+                        <span class="btn-v2 btn-v2--outline btn-v2--sm">Leer más →</span>
+                    </div>
+                </a>
+                
+                <!-- Card 3: Municipio 111 (clickeable) -->
+                <a href="articulo-1991-nacimiento-municipio.html" class="highlight-card" style="text-decoration: none; color: inherit; display: block; cursor: pointer;">
                     <div class="highlight-year">1991</div>
                     <h3>Nacimiento del Municipio</h3>
                     <p>Alonsotegi se convierte en el municipio 111 de Bizkaia tras décadas de lucha.</p>
-                </div>
+                    <div style="margin-top: 1rem; text-align: center;">
+                        <span class="btn-v2 btn-v2--outline btn-v2--sm">Leer más →</span>
+                    </div>
+                </a>
+                
             </div>
         </div>
     </section>
@@ -142,7 +198,8 @@
                 <div class="footer-section">
                     <h4>Contacto</h4>
                     <p>¿Tienes fotos o historias que compartir?</p>
-                    <a href="colabora.html" class="btn btn-secondary">Colabora con nosotros</a>
+                    <!-- ✅ CAMBIO: Botón nuevo en footer -->
+                    <a href="colabora.html" class="btn-v2 btn-v2--secondary">Colabora con nosotros</a>
                 </div>
             </div>
             <div class="footer-bottom">
