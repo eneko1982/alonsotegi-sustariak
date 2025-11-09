@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fray Martín de Coscojales: Historiador e Inquisidor de Alonsotegi - Alonsotegi Sustraiak</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .article-detail {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 3px solid var(--color-primary);
+        }
+        .article-title {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        .article-meta-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+            color: var(--color-text-light);
+            flex-wrap: wrap;
+        }
+        .article-body {
+            line-height: 1.9;
+            font-size: 1.15rem;
+        }
+        .article-body h3 {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            color: var(--color-primary-dark);
+            margin: 2.5rem 0 1rem;
+        }
+        .article-body p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+        .highlight-box {
+            background: var(--color-sepia);
+            border-left: 5px solid var(--color-primary);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 5px;
+        }
+        .biography-header {
+            background: linear-gradient(135deg, #8b4513, #654321);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .biography-header h4 {
+            color: white;
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+        }
+        .biography-header .dates {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+        .biography-header .subtitle {
+            font-style: italic;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+        }
+        .quote-box {
+            background: var(--color-bg-alt);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border: 3px solid var(--color-secondary);
+            font-family: Georgia, serif;
+            font-style: italic;
+        }
+        .quote-box p {
+            color: var(--color-text);
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        .quote-box::before {
+            content: """;
+            font-size: 4rem;
+            color: var(--color-primary);
+            line-height: 0;
+            display: block;
+            margin-bottom: 1rem;
+        }
+        .timeline-box {
+            background: #f9f6f0;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border: 2px solid var(--color-primary-dark);
+        }
+        .timeline-box h4 {
+            color: var(--color-primary-dark);
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+            text-align: center;
+        }
+        .timeline-entry {
+            background: white;
+            padding: 1.2rem;
+            margin: 0.8rem 0;
+            border-radius: 5px;
+            border-left: 5px solid var(--color-accent);
+            display: flex;
+            gap: 1rem;
+        }
+        .timeline-year {
+            font-weight: bold;
+            color: var(--color-primary);
+            font-size: 1.2rem;
+            min-width: 80px;
+            flex-shrink: 0;
+        }
+        .timeline-content {
+            color: var(--color-text);
+        }
+        .controversy-box {
+            background: #fff0f0;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border: 3px solid #cd5c5c;
+        }
+        .controversy-box h4 {
+            color: #8b0000;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+        .historical-work {
+            background: linear-gradient(135deg, #fff8dc, #faebd7);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border: 3px solid var(--color-secondary);
+        }
+        .historical-work h4 {
+            color: var(--color-primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+        .work-detail {
+            background: white;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+            border-left: 5px solid var(--color-accent);
+        }
+        .work-detail strong {
+            color: var(--color-primary-dark);
+            font-size: 1.1rem;
+        }
+        .legacy-box {
+            background: #f0f8ff;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border: 3px solid #4682b4;
+        }
+        .legacy-box h4 {
+            color: #1e3a5f;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        .controversy-context {
+            background: var(--color-bg-alt);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border: 2px dashed var(--color-primary);
+        }
+        .birthplace-debate {
+            background: linear-gradient(135deg, var(--color-sepia), var(--color-bg-alt));
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border: 3px solid var(--color-accent);
+        }
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 1.8rem;
+            }
+            .timeline-entry {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>Alonsotegi Sustraiak</h1>
+                <p class="nav-subtitle">Memoria Histórica</p>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="cronologia.html">Cronología</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="entonces-ahora.html">Entonces y Ahora</a></li>
+                <li><a href="articulos.html" class="active">Artículos</a></li>
+                <li><a href="colabora.html">Colabora</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <article class="article-detail">
+        <header class="article-header">
+            <h1 class="article-title">Fray Martín de Coscojales: Un Historiador e Inquisidor en Alonsotegi</h1>
+            <div class="article-meta-info">
+                <span>📖 Biografía</span>
+                <span>🏛️ Siglo XVI</span>
+                <span>⚖️ Historia</span>
+                <span>📚 12 min de lectura</span>
+            </div>
+        </header>
+
+        <div class="article-body">
+            <div class="biography-header">
+                <h4>Fray Martín de Coscojales</h4>
+                <div class="dates">c. 1542 - c. 1607</div>
+                <div class="subtitle">Primer cronista de Bizkaia nacido en Alonsotegi</div>
+            </div>
+
+            <p>
+                En todos los pueblos han nacido personajes que han dejado su huella en las páginas de la historia. Uno de ellos nació y paseó por Alonsotegi durante sus primeros años de vida. La vida le llevó a viajar, pero siempre sintió una atracción por su tierra, siendo el primero en dejar para la posteridad cómo éramos en su tiempo.
+            </p>
+
+            <p>
+                Nuestro Fray Martín de Coscojales fue el primero en escribir una historia de Bizkaia. Sin embargo, quienes han leído sus libros nos cuentan que le gustaba comentar y criticar las costumbres de nuestros pueblos con una mezcla de erudición y humor que lo hace especialmente valioso como testimonio de época.
+            </p>
+
+            <div class="quote-box">
+                <p>
+                    "En las funerarias, entierros y honras se alquilaban plañideras, llorando en música muy concertada decorando los hechos y proezas de los difuntos."
+                </p>
+                <p style="text-align: right; font-style: normal; margin-top: 1rem; color: var(--color-text-light);">
+                    — Fray Martín de Coscojales, describiendo costumbres funerarias vascas del siglo XVI
+                </p>
+            </div>
+
+            <p>
+                Esta cita, extraída de sus manuscritos, nos muestra a un observador perspicaz y con cierto sentido del humor, capaz de documentar con detalle las costumbres populares de su tiempo, por pintorescas o curiosas que le parecieran.
+            </p>
+
+            <h3>El Misterio del Nacimiento: ¿Irauregi o Portugalete?</h3>
+
+            <p>
+                Como ocurre con muchas figuras históricas del siglo XVI, el lugar exacto de nacimiento de Fray Martín de Coscojales ha sido objeto de debate entre los historiadores. Esta controversia, lejos de restar valor a su figura, añade una capa de interés a su biografía.
+            </p>
+
+            <div class="birthplace-debate">
+                <h4 style="color: var(--color-primary); margin-bottom: 1.5rem; font-size: 1.5rem;">🏘️ El Debate sobre su Origen</h4>
+                
+                <div style="background: white; padding: 1.5rem; border-radius: 8px; margin: 1rem 0; border-left: 5px solid var(--color-primary);">
+                    <strong style="color: var(--color-primary); font-size: 1.2rem;">Tesis tradicional: Irauregi (Alonsotegi)</strong>
+                    <p style="margin-top: 0.8rem;">
+                        Según se ha venido afirmando desde antaño, nació en Irauregi hacia 1542, cuando este barrio pertenecía administrativamente a Barakaldo. Esta es la versión tradicionalmente aceptada y la que vincula directamente a Coscojales con nuestro municipio.
+                    </p>
+                </div>
+
+                <div style="background: white; padding: 1.5rem; border-radius: 8px; margin: 1rem 0; border-left: 5px solid var(--color-secondary);">
+                    <strong style="color: var(--color-secondary); font-size: 1.2rem;">Tesis alternativa: Portugalete</strong>
+                    <p style="margin-top: 0.8rem;">
+                        Don Andrés de Mañaricúa, reconocido historiador, señala que no puede negarse toda probabilidad a la tesis de quienes, como Ciriquiáin Gaiztarro, sostienen que nació en Portugalete, Bizkaia. Esta teoría se basa en la documentación sobre su familia.
+                    </p>
+                </div>
+
+                <p style="margin-top: 1.5rem; padding: 1rem; background: var(--color-sepia); border-radius: 5px; font-style: italic;">
+                    💡 <strong>Nota histórica:</strong> Independientemente del lugar exacto de nacimiento, lo cierto es que Coscojales pasó sus primeros años en Irauregi y mantuvo vínculos con el valle del Kadagua. Su conexión con nuestro territorio es innegable, y así lo reconoce la tradición histórica local.
+                </p>
+            </div>
+
+            <h3>Una Familia de Abolengo</h3>
+
+            <p>
+                Martín de Coscojales nació en el seno de una familia noble y destacada de Bizkaia. Este origen privilegiado marcó su destino, abriéndole puertas en la sociedad de su tiempo que estaban vedadas a la mayoría.
+            </p>
+
+            <div class="highlight-box">
+                <p style="font-weight: 600; color: var(--color-primary); font-size: 1.2rem; margin-bottom: 1rem;">
+                    👨‍👩‍👦 Familia Coscojales
+                </p>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li style="padding: 0.8rem; margin: 0.5rem 0; background: white; border-radius: 5px; border-left: 4px solid var(--color-accent);">
+                        <strong>Padre:</strong> Alcalde de Portugalete, cargo de notable prestigio en la época
+                    </li>
+                    <li style="padding: 0.8rem; margin: 0.5rem 0; background: white; border-radius: 5px; border-left: 4px solid var(--color-accent);">
+                        <strong>Hermano Anton:</strong> Alcalde perpetuo de Portugalete, distinción excepcional que evidenciaba el poder familiar
+                    </li>
+                    <li style="padding: 0.8rem; margin: 0.5rem 0; background: white; border-radius: 5px; border-left: 4px solid var(--color-accent);">
+                        <strong>Estatus:</strong> Familia noble vizcaína con influencia política y económica
+                    </li>
+                </ul>
+            </div>
+
+            <h3>La Formación Intelectual: Salamanca y San Agustín</h3>
+
+            <p>
+                Como correspondía a su posición social, Martín pasó a estudiar a la Universidad de Salamanca, uno de los centros intelectuales más prestigiosos de Europa en el siglo XVI. Allí, siendo colegial del colegio de San Pedro y San Pablo y cuando apenas contaba unos veinte años, tomó una decisión que marcaría toda su vida: ingresó en la Orden de los Ermitaños de San Agustín.
+            </p>
+
+            <p>
+                Su valía intelectual fue reconocida rápidamente. Desempeñó cargos de mucha responsabilidad dentro de la Orden, lo que es índice de la estima que se le profesaba. Allí fue capellán de manto interior, se licenció en Leyes y actuó como provisor de Pedro de Castro, obispo de Salamanca.
+            </p>
+
+            <div class="highlight-box">
+                <p style="font-weight: 600; color: var(--color-primary); font-size: 1.1rem;">
+                    📚 Formación Académica
+                </p>
+                <p style="margin-top: 1rem;">
+                    <strong>Universidad de Salamanca:</strong> Una de las cuatro universidades más antiguas de Europa (fundada en 1218), equiparable a Oxford, Bolonia o París. Estudiar allí era un privilegio reservado a la élite intelectual y social del reino.
+                </p>
+                <p style="margin-top: 1rem;">
+                    <strong>Licenciatura en Leyes:</strong> Esta formación jurídica sería fundamental para su posterior carrera en la administración eclesiástica y, especialmente, en la Inquisición.
+                </p>
+            </div>
+
+            <h3>La Carrera en la Inquisición: Poder y Controversia</h3>
+
+            <p>
+                El punto de inflexión en la vida de Martín de Coscojales llegó cuando abandonó el colegio al ser nombrado inquisidor del Tribunal de Granada. Este cargo, de enorme poder y responsabilidad, era al mismo tiempo temido y respetado en la España del siglo XVI.
+            </p>
+
+            <p>
+                De Granada pasó al Tribunal de Toledo, aún más prestigioso, y finalmente, en 1564, fue nombrado consejero de Inquisición, tomando posesión de la plaza el 11 de julio de ese año. Este nombramiento lo situaba en la cúspide del aparato inquisitorial español.
+            </p>
+
+            <div class="controversy-box">
+                <h4>⚖️ El Caso de Murcia: Una Misión Delicada</h4>
+                
+                <p>
+                    La actuación de la Inquisición en Murcia contra un supuesto foco de judaizantes, llevada a cabo en medio de irregularidades y excesos por Cristóbal de Salazar y Jerónimo Manrique, provocó numerosas quejas ante Felipe II y ante el mismo Pontífice.
+                </p>
+
+                <div class="controversy-context">
+                    <p><strong>El Conflicto:</strong></p>
+                    <p style="margin-top: 0.8rem;">
+                        El Papa Pío V encargó al obispo de Granada, Pedro Guerrero, que entendiese en aquel asunto, aunque Diego de Espinosa, presidente del Consejo Real, impidió su intervención. Era una disputa de poder entre autoridades civiles y eclesiásticas, con la Inquisición en el centro.
+                    </p>
+                </div>
+
+                <p style="margin-top: 1.5rem;">
+                    En calidad de miembro del partido "ebolista", Martín de Coscojales fue quien se ocupó de revisar el sumario incoado a los inquisidores, los cuales estaban protegidos por el inquisidor general Fernando de Valdés. Simultáneamente, había de ocuparse de devolver la calma a la ciudad.
+                </p>
+
+                <p style="margin-top: 1rem; font-weight: 600; color: #8b0000;">
+                    Sin embargo, a estas funciones sólo pudo dar comienzo, pues murió en breve, siendo sustituido por Francisco de Soto Salazar.
+                </p>
+
+                <p style="margin-top: 1rem; font-style: italic; color: var(--color-text-light);">
+                    Esta referencia a su "muerte en breve" en Murcia es confusa, ya que sabemos que Coscojales vivió hasta aproximadamente 1607. Probablemente se refiere al fin de su misión en Murcia, no a su fallecimiento.
+                </p>
+            </div>
+
+            <h3>Cronología Vital: Una Vida entre Conventos</h3>
+
+            <p>
+                Tras su paso por la alta administración inquisitorial, Coscojales retomó la vida conventual, ocupando diversos cargos en la Orden Agustina a lo largo de las últimas décadas del siglo XVI.
+            </p>
+
+            <div class="timeline-box">
+                <h4>📅 Cronología de Fray Martín de Coscojales</h4>
+                
+                <div class="timeline-entry">
+                    <div class="timeline-year">c. 1542</div>
+                    <div class="timeline-content">
+                        <strong>Nacimiento</strong> en Irauregi (Alonsotegi) o posiblemente Portugalete
+                    </div>
+                </div>
+
+                <div class="timeline-entry">
+                    <div class="timeline-year">c. 1562</div>
+                    <div class="timeline-content">
+                        <strong>Ingreso</strong> en la Orden de los Ermitaños de San Agustín en Salamanca (aprox. 20 años)
+                    </div>
+                </div>
+
+                <div class="timeline-entry">
+                    <div class="timeline-year">1564</div>
+                    <div class="timeline-content">
+                        <strong>Consejero de Inquisición</strong> - Toma posesión el 11 de julio
+                    </div>
+                </div>
+
+                <div class="timeline-entry">
+                    <div class="timeline-year">1565</div>
+                    <div class="timeline-content">
+                        <strong>Convento de Salamanca</strong> - Forma parte de la consulta
+                    </div>
+                </div>
+
+                <div class="timeline-entry">
+                    <div class="timeline-year">1571</div>
+                    <div class="timeline-content">
+                        <strong>Prior del convento de Talavera</strong>
+                    </div>
+                </div>
+
+                <div class="timeline-entry">
+                    <div class="timeline-year">1582</div>
+                    <div class="timeline-content">
+                        <strong>Diputado del convento de Salamanca</strong>
+                    </div>
+                </div>
+
+                <div class="timeline-entry">
+                    <div class="timeline-year">1590</div>
+                    <div class="timeline-content">
+                        <strong>Comienza a escribir</strong> las "Antigüedades de Vizcaya" - Su obra magna
+                    </div>
+                </div>
+
+                <div class="timeline-entry">
+                    <div class="timeline-year">1592</div>
+                    <div class="timeline-content">
+                        <strong>Vicario prior</strong> del convento de Valladolid
+                    </div>
+                </div>
+
+                <div class="timeline-entry">
+                    <div class="timeline-year">c. 1600</div>
+                    <div class="timeline-content">
+                        <strong>Residencia en Bilbao</strong> - Convento de San Agustín
+                    </div>
+                </div>
+
+                <div class="timeline-entry">
+                    <div class="timeline-year">1603</div>
+                    <div class="timeline-content">
+                        <strong>Comisionado</strong> por el Regimiento General del Señorío como informante sobre los escritos del doctor Puerto
+                    </div>
+                </div>
+
+                <div class="timeline-entry">
+                    <div class="timeline-year">c. 1607</div>
+                    <div class="timeline-content">
+                        <strong>Fallecimiento</strong> en el convento de Bilbao, donde quedaron sus manuscritos
+                    </div>
+                </div>
+            </div>
+
+            <h3>La Obra Magna: Antigüedades de Vizcaya</h3>
+
+            <p>
+                Martín de Coscojales ha pasado justamente a los anales de la historiografía vizcaína por su monumental obra sobre las "Antigüedades de Vizcaya". Empezó a escribirla a partir de 1590, completando siete volúmenes manuscritos, de los que, tras varias peripecias, han llegado cinco a nuestros días, si bien no completos.
+            </p>
+
+            <div class="historical-work">
+                <h4>📖 Antigüedades de Vizcaya</h4>
+                
+                <div class="work-detail">
+                    <strong>Período de escritura:</strong> A partir de 1590
+                    <p style="margin-top: 0.5rem;">Coscojales dedicó los últimos 17 años de su vida a esta obra monumental, trabajando incansablemente en la recopilación y documentación de la historia vizcaína.</p>
+                </div>
+
+                <div class="work-detail">
+                    <strong>Volúmenes originales:</strong> Siete manuscritos
+                    <p style="margin-top: 0.5rem;">Una obra de proporciones épicas para su tiempo, que ambicionaba abarcar toda la historia del Señorío de Bizkaia desde sus orígenes legendarios.</p>
+                </div>
+
+                <div class="work-detail">
+                    <strong>Estado actual:</strong> Cinco volúmenes conservados (incompletos)
+                    <p style="margin-top: 0.5rem;">Dos volúmenes se perdieron tras varias peripecias históricas. Los cinco conservados llegaron a nosotros con lagunas y daños, pero siguen siendo una fuente histórica de primer orden.</p>
+                </div>
+
+                <div class="work-detail">
+                    <strong>Ubicación:</strong> Sus manuscritos quedaron en el convento de San Agustín de Bilbao
+                    <p style="margin-top: 0.5rem;">Tras su muerte, la obra permaneció en Bilbao, desde donde comenzó su azaroso periplo hasta llegar a archivos y bibliotecas actuales.</p>
+                </div>
+            </div>
+
+            <h3>Metodología Histórica: Entre la Fábula y el Archivo</h3>
+
+            <p>
+                La valoración de la obra de Coscojales por parte de los historiadores modernos es matizada pero, en general, muy positiva. Como cualquier historiador del siglo XVI, trabajaba con las limitaciones metodológicas de su época, pero su aportación fue revolucionaria para Bizkaia.
+            </p>
+
+            <div class="legacy-box">
+                <h4>🏛️ El Legado Historiográfico</h4>
+                
+                <p style="font-weight: 600; color: #1e3a5f; margin-bottom: 1rem;">
+                    Según el historiador Andrés de Mañaricúa:
+                </p>
+
+                <div class="quote-box" style="border-color: #4682b4;">
+                    <p>
+                        "Si bien careció del suficiente sentido crítico que le hiciera cernir las fábulas que le llegaban apadrinadas, quizá, por nombres famosos, acudió incansable a los archivos en busca del dato histórico. Y no sólo a los archivos, sino también a la arqueología."
+                    </p>
+                </div>
+
+                <div style="background: white; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <p><strong style="color: var(--color-primary);">Sus virtudes como historiador:</strong></p>
+                    <ul style="margin-top: 1rem; line-height: 1.8;">
+                        <li><strong>Trabajo de archivo:</strong> Consultó sistemáticamente archivos y documentos primarios, algo revolucionario para su época</li>
+                        <li><strong>Interés arqueológico:</strong> No se limitó a documentos escritos; también prestó atención a restos materiales</li>
+                        <li><strong>Sentido histórico robusto:</strong> Más allá de compilar, interpretaba y contextualizaba</li>
+                        <li><strong>Observación etnográfica:</strong> Documentó costumbres populares con detalle</li>
+                    </ul>
+                </div>
+
+                <div style="background: white; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <p><strong style="color: #8b0000;">Sus limitaciones:</strong></p>
+                    <ul style="margin-top: 1rem; line-height: 1.8;">
+                        <li><strong>Crítica de fuentes:</strong> Aceptaba algunas fábulas y leyendas sin el escepticismo que hoy exigiríamos</li>
+                        <li><strong>Influencia de autoridades:</strong> Daba crédito a informaciones por provenir de "nombres famosos"</li>
+                    </ul>
+                </div>
+
+                <p style="margin-top: 1.5rem; padding: 1rem; background: #e6f2ff; border-radius: 5px;">
+                    💡 <strong>Perspectiva histórica:</strong> Debemos juzgar a Coscojales según los estándares de su tiempo. En el siglo XVI, la metodología histórica moderna aún no existía. Su mérito es haber sentado las bases de la historiografía vizcaína cuando nadie antes lo había hecho.
+                </p>
+            </div>
+
+            <h3>Más Que un Compilador</h3>
+
+            <p>
+                Algunos historiadores, como Elías de Tejada, han reducido a Coscojales al nivel de mero compilador. Sin embargo, esta valoración es injusta. Coscojales no se limitó a copiar y reunir documentos: los interpretó, los contextualizó y construyó con ellos una narrativa histórica coherente.
+            </p>
+
+            <p>
+                Su obra representa el primer intento sistemático de escribir una historia completa de Bizkaia. Antes de él, solo existían crónicas fragmentarias, genealogías nobiliarias o documentos administrativos dispersos. Coscojales ambicionó algo mucho mayor: una historia total del Señorío desde sus orígenes hasta su tiempo.
+            </p>
+
+            <div class="highlight-box" style="background: linear-gradient(135deg, var(--color-sepia), var(--color-bg-alt));">
+                <h4 style="color: var(--color-primary); font-size: 1.3rem; margin-bottom: 1rem;">🎓 Importancia Historiográfica</h4>
+                <p>
+                    Martín de Coscojales es el primer cronista de Bizkaia. Su obra "Antigüedades de Vizcaya" marca el nacimiento de la historiografía vizcaína como disciplina. Sin Coscojales, no habría existido Labayru. Sin Labayru, no existiría la historia local que hoy conocemos.
+                </p>
+                <p style="margin-top: 1rem;">
+                    Todos los historiadores posteriores de Bizkaia han bebido, directa o indirectamente, de los manuscritos de Coscojales. Es, literalmente, el padre de nuestra historia escrita.
+                </p>
+            </div>
+
+            <h3>El Regreso a Bilbao: Los Últimos Años</h3>
+
+            <p>
+                En las postrimerías del siglo XVI, Martín de Coscojales regresó a Bizkaia. Residía en Bilbao, en el convento de San Agustín, donde aún vivía en el año 1603. Allí gozaba de fama de hombre letrado, reconocimiento que justifica que fuera uno de los comisionados por el Regimiento General del Señorío para evaluar los escritos del doctor Puerto con vistas a su posible publicación.
+            </p>
+
+            <p>
+                Este dato final de su biografía es significativo: incluso en edad avanzada, Coscojales seguía siendo consultado como autoridad intelectual por las instituciones del Señorío. Su vuelta a Bizkaia en sus últimos años tiene, además, un valor simbólico: tras una vida de peregrinaje por conventos y tribunales de toda España, el hijo de Irauregi volvió a su tierra para morir en ella.
+            </p>
+
+            <p>
+                Su muerte debió de tener lugar en el convento de Bilbao hacia 1607. Allí quedaron sus manuscritos, que iniciarían un largo periplo hasta llegar a manos de historiadores y archiveros que los preservarían para la posteridad.
+            </p>
+
+            <h3>Reflexión: El Hijo Ilustre de Alonsotegi</h3>
+
+            <p>
+                ¿Qué representa Fray Martín de Coscojales para Alonsotegi? En primer lugar, es la prueba de que, incluso en el siglo XVI, nuestro pequeño valle era capaz de dar a luz a figuras de relevancia histórica. Coscojales alcanzó las más altas esferas del poder eclesiástico y administrativo de su tiempo, llegando a ser consejero de Inquisición, un cargo de enorme influencia.
+            </p>
+
+            <p>
+                Pero su mayor legado no es su carrera inquisitorial, sino su obra histórica. Al escribir las "Antigüedades de Vizcaya", Coscojales estaba, de algún modo, escribiendo también sobre nosotros. Documentaba las costumbres, la lengua, las tradiciones y la historia del territorio del que él mismo procedía. Era, en cierto sentido, un historiador que escribía sobre su propia tierra.
+            </p>
+
+            <div class="highlight-box" style="background: linear-gradient(135deg, #fff8dc, #faebd7); margin-top: 3rem;">
+                <h4 style="color: var(--color-primary); font-size: 1.4rem; margin-bottom: 1rem;">💭 Reflexión Final</h4>
+                <p>
+                    Nuestro vecino, consejero de la Santa Inquisición e historiógrafo vizcaíno, falleció hacia 1607 habiendo cumplido una doble misión histórica: documentar su tiempo para las generaciones futuras y sentar las bases de la historiografía de Bizkaia.
+                </p>
+                <p style="margin-top: 1.5rem;">
+                    Cada vez que estudiamos la historia de nuestro territorio, cada vez que leemos sobre el Señorío de Bizkaia, estamos, de algún modo, siguiendo el camino que Fray Martín de Coscojales abrió hace más de cuatro siglos. Su legado no son solo siete volúmenes manuscritos: es la conciencia histórica de todo un pueblo.
+                </p>
+                <p style="margin-top: 1.5rem; font-weight: 600; color: var(--color-primary-dark);">
+                    Desde Irauregi hasta la eternidad de los archivos históricos, Martín de Coscojales representa lo mejor que un pueblo puede dar: conocimiento, memoria y el deseo de que esa memoria no se pierda. Es, sin duda, parte fundamental de nuestros <em>sustraiak</em>, de nuestras raíces.
+                </p>
+            </div>
+        </div>
+
+        <div style="margin-top: 3rem; padding: 2rem; background: var(--color-sepia); border-radius: 10px; border-left: 5px solid var(--color-primary);">
+            <h4 style="color: var(--color-primary); margin-bottom: 1rem;">📚 Fuentes Consultadas</h4>
+            <ul style="line-height: 2.2; color: var(--color-text);">
+                <li><strong>Andrés E. de Mañaricúa y Nuere:</strong> <em>Historiografía de Vizcaya (desde Lope García de Salazar a Labayru)</em>, 1971, páginas 92-102</li>
+                <li><strong>Labayru:</strong> <em>Historia General del Señorío de Vizcaya</em>, IV, páginas 599-606</li>
+                <li><strong>Ángel Rodríguez Herrero:</strong> "Coscojales y Poza", en el <em>Boletín de la Real Sociedad Vascongada de Amigos del País</em>, 16 (1960), páginas 135-163</li>
+                <li><strong>Real Academia de la Historia:</strong> <a href="https://historia-hispanica.rah.es/biografias/13290-martin-de-coscojales" target="_blank" style="color: var(--color-primary);">Biografía de Martín de Coscojales</a></li>
+                <li><strong>Archivo Histórico Nacional:</strong> Inquisición, microfilm caja 1579, rollo 10211-12015, lib. 575, fol. 325r. (2.ª foliación); lib. 1232, fols. 174r. y 175r.</li>
+            </ul>
+            <p style="margin-top: 1.5rem; font-style: italic; color: var(--color-text-light); font-size: 0.95rem;">
+                Este artículo se basa en la investigación publicada en el blog Alonsotegi Sustraiak, complementada con fuentes históricas primarias y secundarias sobre la vida y obra de Fray Martín de Coscojales.
+            </p>
+        </div>
+
+        <div style="text-align: center; margin-top: 4rem; padding: 2rem; background: var(--color-bg-alt); border-radius: 10px;">
+            <a href="articulos.html" class="btn btn-primary">← Volver a Artículos</a>
+        </div>
+    </article>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Alonsotegi Sustraiak</h3>
+                    <p>Recuperando y compartiendo la memoria histórica de nuestro pueblo.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="cronologia.html">Cronología</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                        <li><a href="articulos.html">Artículos</a></li>
+                        <li><a href="colabora.html">Colabora</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p>¿Tienes fotos o historias que compartir?</p>
+                    <a href="colabora.html" class="btn btn-secondary">Colabora con nosotros</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Alonsotegi Sustraiak. Proyecto de recuperación de memoria histórica.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
