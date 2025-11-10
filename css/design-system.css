@@ -770,5 +770,29 @@ body > section:nth-last-of-type(2) {
 }
 
 /* ============================================
+   EMERGENCY FIX - ÚLTIMO RECURSO
+   ============================================ */
+
+/* Forzar espaciado en TODO el sitio */
+section:not(.hero):not(.navbar):not(.footer) {
+    margin-bottom: var(--spacing-3xl) !important;
+}
+
+.hero {
+    margin-bottom: 0 !important;
+    padding-bottom: var(--spacing-2xl) !important;
+}
+
+.hero-meta {
+    margin-bottom: var(--spacing-3xl) !important;
+}
+
+@media (max-width: 600px) {
+    .hero {
+        min-height: 550px !important;
+        padding-bottom: var(--spacing-xl) !important;
+    }
+}
+/* ============================================
    FIN DEL DESIGN SYSTEM
    ============================================ */
