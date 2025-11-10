@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Ermita de San Martín: Misterio, Fuego y Resurrección - Alonsotegi Sustraiak</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/design-system.css">
+ 
+    <style>
+        .article-detail {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 3px solid var(--color-primary);
+        }
+        .article-title {
+            font-family: var(--font-heading);
+            font-size: clamp(1.8rem, 5vw + 1rem, 2.8rem);
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        .article-meta-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+            color: var(--color-text-light);
+            flex-wrap: wrap;
+        }
+        .article-body {
+            line-height: 1.9;
+            font-size: 1.15rem;
+        }
+        .article-body h3 {
+            font-family: var(--font-heading);
+            font-size: clamp(1.5rem, 4vw + 0.8rem, 1.8rem);
+            color: var(--color-primary-dark);
+            margin: 2.5rem 0 1rem;
+        }
+        .article-body p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+        .highlight-box {
+            background: var(--color-sepia);
+            border-left: 5px solid var(--color-primary);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 5px;
+        }
+        .mystery-box {
+            background: linear-gradient(135deg, #2C2416 0%, #654321 100%);
+            color: #FAF8F3;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border: 3px solid var(--color-secondary);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        .mystery-box h4 {
+            color: #CD853F;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+        .carta-box {
+            background: #F5F1E8;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border: 2px solid #8B4513;
+            font-family: Georgia, serif;
+            font-style: italic;
+            position: relative;
+        }
+        .carta-box::before {
+            content: "📜";
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            font-size: 2rem;
+            background: var(--color-bg);
+            padding: 0 10px;
+        }
+        .inauguracion-box {
+            background: var(--color-bg-alt);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border-top: 4px solid var(--color-primary);
+        }
+        .timeline-event {
+            background: white;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+            border-left: 5px solid var(--color-secondary);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .timeline-event h5 {
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        .personaje-box {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border: 2px solid var(--color-secondary);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .arquitectura-box {
+            background: var(--color-sepia);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        .arquitectura-box ul {
+            line-height: 2;
+            margin-left: 1.5rem;
+        }
+        .curiosidad-item {
+            background: white;
+            padding: 1rem 1.5rem;
+            margin: 0.5rem 0;
+            border-radius: 5px;
+            border-left: 4px solid var(--color-accent);
+        }
+        @media (max-width: 600px) {
+            .article-detail {
+                padding: 3rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <img src="images/alonsotegi-logo.png" alt="Escudo de Alonsotegi" class="nav-logo">
+                <div>
+                    <h1>Alonsotegi Sustraiak</h1>
+                    <p class="nav-subtitle">Memoria Histórica</p>
+                </div>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="cronologia.html">Cronología</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="entonces-ahora.html">Entonces y Ahora</a></li>
+                <li><a href="articulos.html" class="active">Artículos</a></li>
+                <li><a href="colabora.html">Colabora</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <article class="article-detail">
+        <header class="article-header">
+            <h1 class="article-title">La Ermita de San Martín: Misterio, Fuego y Resurrección</h1>
+            <div class="article-meta-info">
+                <span>⛪ Patrimonio</span>
+                <span>🔥 1909</span>
+                <span>📖 10 min de lectura</span>
+            </div>
+        </header>
+
+        <div class="article-body">
+            <p>
+                En el barrio de San Martín de Alonsotegi se alza una pequeña ermita que guarda una de las historias más fascinantes del patrimonio local. No es solo un edificio religioso: es el escenario de un misterio sin resolver, el testamento arquitectónico de un empresario minero generoso, y el recuerdo de una inauguración legendaria que congregó a más de 200 personas en 1909. Esta es la historia de cómo una imagen perdida, un incendio devastador y la voluntad de un hombre dieron vida a la ermita de San Martín.
+            </p>
+
+            <h3>El Mecenas: Don Maximino Chávarri y Larrea</h3>
+
+            <p>
+                La historia de la ermita actual comienza con un hombre: <strong>Don Maximino Chávarri y Larrea</strong>, propietario de la mina Allen en Zamundi. Este empresario minero, hombre de recursos y fe, tomó la iniciativa de construir una nueva ermita en <strong>1909</strong>, en terrenos de su propiedad.
+            </p>
+
+            <div class="personaje-box">
+                <h4 style="color: var(--color-primary); margin-bottom: 1rem;">👤 Maximino Chávarri y Larrea</h4>
+                <p style="margin: 0; line-height: 1.8;">
+                    <strong>Propietario:</strong> Mina Allen (Zamundi)<br>
+                    <strong>Iniciativa:</strong> Construcción de la ermita de San Martín (1909)<br>
+                    <strong>Generosidad:</strong> Costeó personalmente el banquete de inauguración para más de 100 comensales<br>
+                    <strong>Legado:</strong> Salvó la imagen de San Martín y le construyó un nuevo hogar
+                </p>
+            </div>
+
+            <p>
+                La ermita que Chávarri mandó construir no era la primera. El edificio actual <strong>sustituyó a otra más antigua</strong> emplazada en el mismo lugar y con la misma advocación, que había sido <strong>pasto de las llamas</strong>. De ese primer templo, consumido por el fuego, no quedan más que referencias en la memoria oral y en los documentos de la época.
+            </p>
+
+            <h3>El Arquitecto: Don Alfredo Acebal</h3>
+
+            <p>
+                Para diseñar la nueva ermita, Chávarri encargó el proyecto al <strong>arquitecto municipal de Barakaldo, Don Alfredo Acebal</strong>. Acebal concibió un edificio sobrio pero elegante, adaptado a la topografía del barrio y al presupuesto disponible.
+            </p>
+
+            <h3>Características Arquitectónicas: Sencillez y Función</h3>
+
+            <p>
+                La ermita de San Martín responde al modelo clásico de pequeño templo rural vasco de principios del siglo XX. Su diseño prioriza la funcionalidad sin renunciar a cierta elegancia constructiva.
+            </p>
+
+            <div class="arquitectura-box">
+                <h4 style="color: var(--color-primary); margin-bottom: 1rem;">🏛️ Descripción arquitectónica</h4>
+                <ul>
+                    <li><strong>Planta:</strong> Rectangular</li>
+                    <li><strong>Muros:</strong> Mampostería enlucida</li>
+                    <li><strong>Refuerzos:</strong> Sillería en las esquinas</li>
+                    <li><strong>Cubierta:</strong> A dos aguas</li>
+                    <li><strong>Espadaña:</strong> De un vano, con campana y tejadillo, rematada con cruz de piedra</li>
+                    <li><strong>Acceso principal:</strong> Amplio hueco en arco de medio punto con rosca moldurada</li>
+                    <li><strong>Vanos laterales:</strong> Sendos vanos de medio punto en los lados de la Epístola y el Evangelio</li>
+                </ul>
+            </div>
+
+            <p>
+                Es un edificio modesto pero digno, diseñado para servir a una comunidad pequeña. En la época de la construcción de la ermita, el <strong>barrio de San Martín y el Somo se componía de siete casas con once viviendas</strong> situadas en la margen derecha del río Kadagua, encima de la carretera de las Encartaciones.
+            </p>
+
+            <h3>El Misterio de la Imagen: Una Historia sin Descifrar</h3>
+
+            <p>
+                Pero la verdadera fascinación de esta ermita no reside en su arquitectura, sino en el <strong>misterio que rodea a la imagen de San Martín Obispo</strong> que se venera en su interior. Una imagen cuyo origen ha generado leyendas y conjeturas que aún hoy no han sido completamente resueltas.
+            </p>
+
+            <div class="mystery-box">
+                <h4>🔍 El Hallazgo Misterioso</h4>
+                <p style="line-height: 1.8;">
+                    Según la <strong>creencia popular</strong>, a principios del siglo XX, una imagen de San Martín Obispo fue <strong>encontrada bajo el puente de Alonsotegui, en un pozo del río</strong>. El misterio de este hallazgo no ha sido todavía descifrado a pesar de las diversas conjeturas que corren por el pueblo y lugares circunvecinos.
+                </p>
+                <p style="margin-top: 1rem; font-weight: 600; color: #CD853F;">
+                    ¿Cómo llegó la imagen al río? ¿Fue arrojada durante algún conflicto? ¿Se cayó accidentalmente? ¿Era un acto devocional? Nadie lo sabe.
+                </p>
+            </div>
+
+            <h3>La Verdad según Maximino Chávarri</h3>
+
+            <p>
+                Sin embargo, existe una versión alternativa —y probablemente más fiable— de los hechos. El propio <strong>Maximino Chávarri</strong>, en una carta dirigida al <strong>Obispo de la diócesis</strong>, ofreció una explicación muy diferente y mucho menos romántica:
+            </p>
+
+            <div class="carta-box">
+                <p style="margin-bottom: 1rem;">
+                    <em>"Ni antes ni después de esta época ha existido en esta Anteiglesia ninguna otra Ermita. La imagen de San Martín que allí se veneró estuvo desde entonces y por espacio de tantos años desechada y estropeada en un rincón de objetos inservibles de la parroquia de Alonsótegui."</em>
+                </p>
+                <p style="margin-bottom: 1rem;">
+                    <em>"Cuando esta se derribo en el año 1899 para construir la nueva que actualmente existe parece ser que esta imagen anduvo por allí tirada en la calle sirviendo de juguete a los muchachos no hallando entre ellos quienes en sus travesuras [tuvieron la idea] de echarle al agua, pero uno de ellos tuvo la buena ocurrencia de llevarla a su casa y esconderla en el camarote."</em>
+                </p>
+            </div>
+
+            <p>
+                Según esta versión, la imagen de San Martín Obispo, <strong>salvada del fuego de la ermita original</strong>, había sido trasladada a la antigua parroquia de San Bartolomé de Alonsotegi. Sin embargo, el paso del tiempo hizo que la imagen fuera deteriorándose y, al derribarse la vieja parroquia en 1899 para construir la nueva, la talla quedó abandonada, olvidada entre escombros.
+            </p>
+
+            <p>
+                Los niños del pueblo, en sus juegos, encontraron la imagen y la usaron como juguete. Algunos llegaron incluso a considerar arrojarla al agua. Fue entonces cuando <strong>uno de ellos tuvo la "buena ocurrencia" de llevarla a su casa y esconderla en el camarote</strong>, salvándola así de un destino ignominioso.
+            </p>
+
+            <div class="highlight-box">
+                <h4 style="color: var(--color-primary); margin-bottom: 1rem;">🔥 De las Llamas al Olvido, del Olvido al Río</h4>
+                <p>
+                    La imagen de San Martín había sobrevivido a <strong>dos desastres</strong>: primero, al incendio que destruyó la ermita original; segundo, al abandono y la posibilidad de ser arrojada al río por unos niños. Su rescate por un muchacho anónimo es, en sí mismo, un pequeño milagro secular.
+                </p>
+            </div>
+
+            <p>
+                Ambas versiones —la leyenda popular del hallazgo en el río y el relato de Chávarri sobre los niños— no son necesariamente contradictorias. Es posible que la imagen efectivamente acabara en el agua antes de ser recuperada, fusionando así la leyenda con la realidad documentada.
+            </p>
+
+            <h3>La Inauguración del 24 de Junio de 1909: Una Fiesta Legendaria</h3>
+
+            <p>
+                La inauguración de la ermita de San Martín no fue un acto discreto. Fue un <strong>acontecimiento social de primer orden</strong> que congregó a autoridades, vecinos y curiosos en una celebración que la prensa de la época describió con asombro y detalle.
+            </p>
+
+            <div class="inauguracion-box">
+                <h4 style="color: var(--color-primary); margin-bottom: 1.5rem; text-align: center;">🎉 Crónica de la Inauguración - 24 de Junio de 1909</h4>
+
+                <div class="timeline-event">
+                    <h5>👥 Los Invitados de Honor</h5>
+                    <p style="margin: 0;">
+                        A la inauguración asistió la <strong>corporación del Ayuntamiento de Barakaldo</strong> presidida por <strong>Don Tomás de Begoña y Garay</strong> con diez concejales y el secretario de la misma. El alcalde y concejales, junto con la mitad de la Banda Municipal, llegaron <strong>en el tren de la Robla</strong> y les esperaban los concejales de Alonsotegi, los Señores Ugarriza y Urcelay.
+                    </p>
+                </div>
+
+                <div class="timeline-event">
+                    <h5>🔔 La Víspera: Anuncio con Pólvora</h5>
+                    <p style="margin: 0;">
+                        Según el periódico de la época <strong>"El Eco de Baracaldo"</strong>: <em>"La víspera los chupinazos y voladores al toque de oración, anunciaron al vecindario que al día siguiente será fiesta y en realidad así ha sido"</em>.
+                    </p>
+                </div>
+
+                <div class="timeline-event">
+                    <h5>🗝️ 9:30 - Entrega de Llaves</h5>
+                    <p style="margin: 0;">
+                        La fiesta de inauguración comenzó a las nueve y media con la <strong>entrega de las llaves</strong> al Sr. Alcalde, quien a su vez las entregó a <strong>San Vicente de Iturbe</strong>, párroco por entonces de la parroquia de Alonsotegi.
+                    </p>
+                </div>
+
+                <div class="timeline-event">
+                    <h5>⛪ 10:00 - La Bendición Solemne</h5>
+                    <p style="margin: 0;">
+                        A las diez dio comienzo la bendición, <strong>concelebrada por cinco sacerdotes</strong>. Durante la consagración se oyeron los acordes de la <strong>Marcha Real</strong> tocada por una sección de la Banda de Música de Barakaldo. <strong>Don Donato de Beascoechea</strong>, presbítero de San Vicente de Barakaldo, tocó el armonio durante la misa acompañado por un ochote. El acto se dio por terminado con un solemne <em>Te Deum</em>.
+                    </p>
+                </div>
+
+                <div class="timeline-event">
+                    <h5>🍽️ El Banquete: Más de 100 Comensales</h5>
+                    <p style="margin: 0;">
+                        Terminada la misa, se procedió a la preparación de mesas. Los testimonios varían: algunos hablan de <strong>más de 80 comensales</strong>, otros de <strong>cubiertos para más de 100 personas</strong>. Los periodistas se asombraron de que <strong>las viandas del banquete fueron conducidas en un carro de bueyes</strong> a la casa donde prepararon la comida. El banquete fue costeado íntegramente por <strong>Don Maximino Chávarri</strong>.
+                    </p>
+                </div>
+
+                <div class="timeline-event">
+                    <h5>💃 Por la Tarde: El Gran Baile</h5>
+                    <p style="margin: 0;">
+                        Según la prensa: <em>"Por la tarde fue muy grande la animación de la gente joven haciendo un baile como no ha habido nunca en el Somo y tardará muchos años en haberlo igual"</em>. Fue un <strong>animado baile al estilo de espacio</strong> amenizado por la Banda de Música.
+                    </p>
+                </div>
+
+                <div class="timeline-event">
+                    <h5>🌧️ 18:00 - Fin de la Fiesta</h5>
+                    <p style="margin: 0;">
+                        A las seis de la tarde se disolvieron los reunidos por algunos chubascos. Varios de los "Expedicionarios" fueron conducidos por un <em>chauffeur</em> (conductor de automóvil, todo un lujo en 1909).
+                    </p>
+                </div>
+            </div>
+
+            <p>
+                Se calculó la asistencia en <strong>unos doscientos presentes</strong>. Para un barrio de apenas once viviendas, congregar a 200 personas era un evento sin precedentes. La ermita de San Martín no solo renacía de sus cenizas: nacía por todo lo alto.
+            </p>
+
+            <h3>Curiosidades de la Inauguración</h3>
+
+            <p>
+                Los detalles que la prensa rescató de aquel día nos permiten reconstruir la atmósfera de una celebración que mezclaba lo religioso, lo social y lo festivo:
+            </p>
+
+            <div style="background: var(--color-bg-alt); padding: 2rem; border-radius: 10px; margin: 2rem 0;">
+                <div class="curiosidad-item">
+                    <strong>🚂 El tren como símbolo de modernidad:</strong> El hecho de que el alcalde y concejales llegaran en el tren de la Robla era noticia en sí misma. El ferrocarril, inaugurado en 1894, seguía siendo una novedad que impresionaba.
+                </div>
+
+                <div class="curiosidad-item">
+                    <strong>🎺 La Marcha Real en la consagración:</strong> Que sonara el himno nacional durante la consagración refleja el ambiente de la época, donde lo patriótico y lo religioso se entrelazaban sin conflicto.
+                </div>
+
+                <div class="curiosidad-item">
+                    <strong>🐂 Las viandas en carro de bueyes:</strong> El contraste entre la modernidad del tren y la tradición del carro de bueyes transportando comida es revelador. Alonsotegi vivía entre dos mundos: el industrial y el rural.
+                </div>
+
+                <div class="curiosidad-item">
+                    <strong>💰 La generosidad de Chávarri:</strong> Costear un banquete para 100+ personas era un gesto de magnanimidad que consolidaba el estatus social del empresario minero.
+                </div>
+
+                <div class="curiosidad-item">
+                    <strong>🚗 El <em>chauffeur</em> al final:</strong> La mención de que algunos invitados fueron conducidos por un <em>chauffeur</em> (conductor de automóvil) es significativa. En 1909, tener acceso a un automóvil con conductor era un lujo reservado a la élite.
+                </div>
+
+                <div class="curiosidad-item">
+                    <strong>💃 "Un baile como no ha habido nunca":</strong> La prensa no escatimó superlativos. Para los jóvenes del Somo, aquella tarde de baile fue histórica.
+                </div>
+            </div>
+
+            <h3>El Legado de la Ermita</h3>
+
+            <p>
+                Hoy, más de un siglo después de su inauguración, la ermita de San Martín sigue en pie. Es un testimonio arquitectónico de la generosidad de Maximino Chávarri, del talento de Alfredo Acebal, y de la fe de una comunidad pequeña pero devota.
+            </p>
+
+            <p>
+                Pero es también el guardián de un misterio. La imagen de San Martín Obispo, salvada de las llamas, rescatada del olvido y quizás recuperada del río, preside el interior del templo. Su historia —mezcla de leyenda y verdad documentada— es un recordatorio de que cada objeto sagrado, cada edificio religioso, cada tradición local, esconde capas de historias humanas: generosidad y abandono, fe y olvido, fuego y agua, destrucción y renacimiento.
+            </p>
+
+            <div class="highlight-box" style="background: linear-gradient(135deg, var(--color-sepia), var(--color-bg-alt)); margin-top: 3rem;">
+                <h4 style="color: var(--color-primary); font-size: 1.3rem; margin-bottom: 1rem;">💭 Reflexión final</h4>
+                <p>
+                    La ermita de San Martín no es solo un edificio. Es la materialización de una segunda oportunidad. La imagen que estuvo a punto de desaparecer —primero en el fuego, luego en el olvido, quizás en el río— encontró finalmente un hogar digno gracias a la iniciativa de un empresario que supo ver más allá del beneficio económico.
+                </p>
+                <p style="margin-top: 1rem;">
+                    En un siglo marcado por la industrialización feroz, donde Alonsotegi se transformaba a ritmo vertiginoso, Maximino Chávarri eligió invertir en memoria, en fe, en comunidad. La ermita que construyó sigue siendo un lugar de encuentro, un símbolo de identidad barrial. Y la imagen que salvó, después de sobrevivir a todo, sigue vigilando desde su altar.
+                </p>
+                <p style="margin-top: 1rem;">
+                    Quizás eso sea, al final, lo que define a un pueblo: no solo su capacidad de crear, sino su capacidad de rescatar, de dar segundas oportunidades, de no dejar que la memoria se pierda en el río del olvido.
+                </p>
+            </div>
+
+            <div style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-alt); border-radius: 10px; border-left: 4px solid var(--color-primary);">
+                <h4 style="color: var(--color-primary); margin-bottom: 1rem;">📚 Fuentes consultadas</h4>
+                <ul style="line-height: 2; color: var(--color-text-light);">
+                    <li>Carta de Maximino Chávarri al Obispo de la diócesis (1909)</li>
+                    <li>Blog Alonsotegi Sustraiak - Artículo "Ermita de San Martín"</li>
+                    <li>"El Eco de Baracaldo" - Crónica de la inauguración (24 junio 1909)</li>
+                    <li>Documentación del arquitecto Alfredo Acebal</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 4rem; padding: 2rem; background: var(--color-bg-alt); border-radius: 10px;">
+            <a href="articulos.html" class="btn-v2 btn-v2--primary">← Volver a Artículos</a>
+        </div>
+    </article>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Alonsotegi Sustraiak</h3>
+                    <p>Recuperando y compartiendo la memoria histórica de nuestro pueblo.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="cronologia.html">Cronología</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                        <li><a href="articulos.html">Artículos</a></li>
+                        <li><a href="colabora.html">Colabora</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p>¿Tienes fotos o historias que compartir?</p>
+                    <a href="colabora.html" class="btn-v2 btn-v2--secondary">Colabora con nosotros</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Alonsotegi Sustraiak. Proyecto de recuperación de memoria histórica.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

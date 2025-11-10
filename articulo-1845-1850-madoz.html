@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alonsotegi según el Diccionario de Madoz (1845-1850) - Alonsotegi Sustraiak</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/design-system.css">
+
+    <style>
+        .article-detail {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 3px solid var(--color-primary);
+        }
+        .article-title {
+            font-family: var(--font-heading);
+            font-size: clamp(1.8rem, 5vw + 1rem, 2.8rem);
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        .article-meta-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+            color: var(--color-text-light);
+            flex-wrap: wrap;
+        }
+        .article-body {
+            line-height: 1.9;
+            font-size: 1.15rem;
+        }
+        .article-body h3 {
+            font-family: var(--font-heading);
+            font-size: clamp(1.5rem, 4vw + 0.8rem, 1.8rem);
+            color: var(--color-primary-dark);
+            margin: 2.5rem 0 1rem;
+        }
+        .article-body p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+        .highlight-box {
+            background: var(--color-sepia);
+            border-left: 5px solid var(--color-primary);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 5px;
+        }
+        .highlight-box strong {
+            color: var(--color-primary);
+            font-size: 1.2rem;
+        }
+        .madoz-quote {
+            background: var(--color-bg-alt);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border: 3px solid var(--color-primary);
+            font-family: Georgia, serif;
+            font-style: italic;
+        }
+        .madoz-quote p {
+            margin-bottom: 1rem;
+            color: var(--color-text);
+            line-height: 1.8;
+        }
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .data-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+            border-top: 3px solid var(--color-primary);
+        }
+        .data-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--color-primary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .data-label {
+            font-size: 0.95rem;
+            color: var(--color-text-light);
+        }
+        .comparison-box {
+            background: linear-gradient(135deg, var(--color-bg-alt), var(--color-sepia));
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        .author-box {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border-left: 5px solid var(--color-secondary);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        @media (max-width: 600px) {
+            .data-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 600px) {
+            .article-detail {
+                padding: 3rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <img src="images/alonsotegi-logo.png" alt="Escudo de Alonsotegi" class="nav-logo">
+                <div>
+                    <h1>Alonsotegi Sustraiak</h1>
+                    <p class="nav-subtitle">Memoria Histórica</p>
+                </div>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="cronologia.html">Cronología</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="entonces-ahora.html">Entonces y Ahora</a></li>
+                <li><a href="articulos.html" class="active">Artículos</a></li>
+                <li><a href="colabora.html">Colabora</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <article class="article-detail">
+        <header class="article-header">
+            <h1 class="article-title">Alonsotegi según el Diccionario de Madoz (1845-1850)</h1>
+            <div class="article-meta-info">
+                <span>📚 Siglo XIX</span>
+                <span>📅 1845-1850</span>
+                <span>📖 10 min de lectura</span>
+            </div>
+        </header>
+
+        <div class="article-body">
+            <p>
+                Imagina que pudieras abrir una ventana al pasado y ver cómo era Alonsotegi hace casi 180 años. No a través de fotografías —que apenas existían— sino mediante las palabras precisas de un observador que documentó hasta el último detalle de nuestro pueblo. Esa ventana existe, y se llama el <strong>Diccionario de Madoz</strong>.
+            </p>
+
+            <p>
+                Entre 1845 y 1850, cuando Alonsotegi era todavía una pequeña anteiglesia de apenas 200 almas, un político y estadístico llamado Pascual Madoz emprendió una tarea monumental: describir cada pueblo, cada villa, cada aldea de España. El resultado fue una obra colosal de dieciséis volúmenes que hoy es una joya histórica invaluable.
+            </p>
+
+            <h3>El Diccionario de Madoz: Una Obra Titánica</h3>
+
+            <p>
+                El <strong>Diccionario geográfico-estadístico-histórico de España y sus posesiones de Ultramar</strong> no fue producto de la improvisación. Según el propio Madoz, su elaboración requirió <strong>15 años, 11 meses y 7 días de trabajos literarios</strong>. Para lograr esta hazaña, contó con la ayuda de veinte corresponsales y más de mil colaboradores repartidos por toda España.
+            </p>
+
+            <div class="author-box">
+                <h4 style="color: var(--color-primary); margin-bottom: 1rem;">👤 Pascual Madoz e Ibáñez (1806-1870)</h4>
+                <p style="margin: 0; line-height: 1.7;">
+                    Nacido en Pamplona el 17 de mayo de 1806, Madoz fue un político español vinculado al Partido Progresista. Ministro de Hacienda durante el bienio progresista, presidiría en 1868 el Consejo de Ministros de España y la Junta Provisional Revolucionaria tras la caída de Isabel II. Murió exiliado en Génova el 11 de diciembre de 1870.
+                </p>
+            </div>
+
+            <p>
+                El resultado fue mucho más que un simple listado de pueblos. Es un <strong>censo histórico</strong> que incluye datos económicos, artísticos y demográficos. Documenta el patrimonio histórico, las costumbres, las tradiciones y hasta la geografía de cada localidad. Para nosotros, los alonsotegitarras del siglo XXI, es una fotografía escrita de cómo era nuestro pueblo antes de la revolución industrial, antes de la anexión a Barakaldo, cuando aún éramos una comunidad rural y modesta.
+            </p>
+
+            <h3>Alonsotegi en las Palabras de Madoz</h3>
+
+            <p>
+                La entrada sobre Alonsotegi en el Diccionario de Madoz es breve pero precisa. Es importante recordar que <strong>no incluye Iráuregui</strong>, ya que en aquellos años ese barrio pertenecía a Barakaldo. Lo que Madoz describe es únicamente la antigua anteiglesia. Estas son sus palabras, transcritas textualmente:
+            </p>
+
+            <div class="madoz-quote">
+                <p>
+                    "Con ayuntamiento en la provincia de Vizcaya, diócesis de Calahorra (7 1/2 leguas), audiencia territorial de Burgos (25), ciudad g. de las provincia Vascongadas (12 1/2), y partido judicial de Bilbao (1 1/2)."
+                </p>
+                <p>
+                    "Situada a la falda Norte de la montaña de Pagazarra, y orilla del rio Cadagua. Su Clima sano. Bajo el sistema foral se regía por un fiel sin asiento ni voto en las juntas de Guernica, por haberse separado de su matriz (Arrigoriaga) sin consentimiento del Señorio."
+                </p>
+                <p>
+                    "La iglesia parroquial (San Bartolomé Apóstol) fundada por sus feligreses a principio del siglo XVI, es de una nave con 62 pies de longitud y 37 pies de ancho. El curato es de patronato real: tiene 23 sepulturas y una tumba, además del cementerio."
+                </p>
+                <p>
+                    "El Término confina al N. con Apando 1/4 leg., al E. con Arrigoriaga 1/2, por S. con Miravalles y La-Cuadra 1/2, y al O. con Barakaldo y Gueñes 1/2: le baña el Cadagua, que dejando a la derecha la iglesia, sigue su curso a Castrejana."
+                </p>
+                <p style="margin-bottom: 0;">
+                    "Este rio tiene un puente antiguo llamado Irauregui, y otro recientemente construido en el camino real de Bilbao a Burgos, por Valmaseda, que es de cinco arcos: se denomina puente de Zaramillo, y confina con Gueñes."
+                </p>
+            </div>
+
+            <h3>Un Pueblo Sin Voz Política</h3>
+
+            <p>
+                Uno de los detalles más reveladores de la descripción de Madoz es la situación política de Alonsotegi. El diccionario señala que la anteiglesia <strong>"se regía por un fiel sin asiento ni voto en las juntas de Guernica"</strong>. ¿Por qué? Porque se había separado de Arrigorriaga <strong>"sin consentimiento del Señorío"</strong>.
+            </p>
+
+            <div class="highlight-box">
+                <p><strong>La consecuencia de una separación no reconocida:</strong></p>
+                <p style="margin-top: 1rem;">
+                    Aunque Alonsotegi había construido su propia iglesia parroquial en el siglo XVI y funcionaba de facto como una anteiglesia independiente, esta separación nunca fue oficialmente reconocida por el Señorío de Bizkaia. Como castigo o consecuencia, los vecinos de Alonsotegi carecían de representación directa en las Juntas Generales de Gernika, el órgano de gobierno foral.
+                </p>
+                <p style="margin-top: 1rem;">
+                    Esta exclusión política es un antecedente directo de la lucha por la autonomía que culminaría, siglo y medio después, con la independencia de 1991.
+                </p>
+            </div>
+
+            <h3>La Iglesia de San Bartolomé: Dimensiones y Datos</h3>
+
+            <p>
+                Madoz aporta datos precisos sobre la iglesia parroquial de San Bartolomé, que ya entonces llevaba más de tres siglos en pie. Según el diccionario, el templo medía <strong>62 pies de longitud y 37 pies de ancho</strong>.
+            </p>
+
+            <div class="comparison-box">
+                <h4 style="color: var(--color-primary); margin-bottom: 1rem; text-align: center;">📏 Conversión de medidas: El pie castellano</h4>
+                <p style="text-align: center; color: var(--color-text-light); margin-bottom: 1.5rem;">
+                    Un pie podía variar de un territorio a otro. El pie castellano medía 0,278635 metros.
+                </p>
+                <div style="display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem; font-weight: bold; color: var(--color-primary);">62 pies</div>
+                        <div style="color: var(--color-text-light); margin-top: 0.5rem;">Longitud</div>
+                    </div>
+                    <div style="font-size: 1.5rem; color: var(--color-primary);">×</div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem; font-weight: bold; color: var(--color-primary);">37 pies</div>
+                        <div style="color: var(--color-text-light); margin-top: 0.5rem;">Ancho</div>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 2rem; padding-top: 1.5rem; border-top: 2px dashed var(--color-primary);">
+                    <div style="font-size: 1.5rem; font-weight: 600; color: var(--color-primary-dark);">
+                        ≈ 17,36 m × 10,36 m
+                    </div>
+                    <div style="font-size: 1.2rem; color: var(--color-primary); margin-top: 0.5rem;">
+                        Superficie total: ~180 m²
+                    </div>
+                </div>
+            </div>
+
+            <p>
+                El templo albergaba <strong>23 sepulturas y una tumba</strong>, además del cementerio exterior. El curato era de patronato real, lo que significaba que la Corona tenía ciertos derechos sobre el nombramiento del párroco.
+            </p>
+
+            <h3>Geografía y Comunicaciones</h3>
+
+            <p>
+                Madoz describe con precisión los límites territoriales de Alonsotegi. La anteiglesia confinaba al Norte con Abando (a 1/4 de legua), al Este con Arrigorriaga (1/2 legua), al Sur con Miravalles y La Cuadra (1/2 legua), y al Oeste con Barakaldo y Güeñes (1/2 legua).
+            </p>
+
+            <p>
+                El río Kadagua, que <strong>"dejando a la derecha la iglesia, sigue su curso a Castrejana"</strong>, era el eje vertebrador del valle. Sobre él, dos puentes conectaban Alonsotegi con el mundo exterior:
+            </p>
+
+            <div class="highlight-box">
+                <h4 style="color: var(--color-primary); margin-bottom: 1rem;">🌉 Los dos puentes del Kadagua</h4>
+                <ul style="line-height: 2; margin-left: 1.5rem;">
+                    <li><strong>Puente antiguo de Iráuregui:</strong> Un puente histórico cuya antigüedad Madoz no especifica, pero que ya entonces era considerado "antiguo".</li>
+                    <li style="margin-top: 1rem;"><strong>Puente de Zaramillo:</strong> Descrito como "recientemente construido" en el camino real de Bilbao a Burgos por Valmaseda. Era un puente de cinco arcos que confinaba con Güeñes.</li>
+                </ul>
+            </div>
+
+            <p>
+                Sobre los caminos, Madoz es contundente: eran <strong>"vecinales poco cuidados"</strong>. La correspondencia se recibía desde Bilbao por medio de valija, reflejando la modesta infraestructura de comunicaciones de la época.
+            </p>
+
+            <h3>Economía: Entre la Tierra y el Hierro</h3>
+
+            <p>
+                El Diccionario de Madoz nos ofrece una instantánea de la economía de Alonsotegi a mediados del siglo XIX. El terreno se describe como <strong>"participa de monte y llano, en lo general fragoso, pero con tierra de mediana calidad para el cultivo"</strong>.
+            </p>
+
+            <p>
+                La producción agrícola incluía <strong>maíz, trigo, patatas, algunas legumbres y frutas</strong>, además de <strong>bastante combustible</strong> (leña) y <strong>algún viñedo</strong>. Se criaba ganado vacuno y había caza de liebres, jabalíes y zorros, así como pesca de anguilas, barbos y truchas en el Kadagua.
+            </p>
+
+            <div class="highlight-box">
+                <h4 style="color: var(--color-primary); margin-bottom: 1rem;">⚙️ Industria: Una ferrería y un molino</h4>
+                <p>
+                    Pero lo más significativo de la descripción económica son los dos "artefactos" industriales que Madoz menciona:
+                </p>
+                <ul style="line-height: 2; margin-left: 1.5rem; margin-top: 1rem;">
+                    <li><strong>Una ferrería:</strong> Centro de producción de hierro, símbolo de la antigua industria vasca.</li>
+                    <li><strong>Un molino harinero:</strong> Para la molienda de grano.</li>
+                </ul>
+                <p style="margin-top: 1.5rem; font-weight: 600; color: var(--color-primary);">
+                    Y aquí viene el dato clave: <em>"Ambos artefactos en estado de prosperidad"</em>.
+                </p>
+            </div>
+
+            <p>
+                Este detalle es fundamental. A mediados del siglo XIX, Alonsotegi aún mantenía una ferrería activa y próspera, conectando al pueblo con la tradición siderúrgica vasca que se remontaba siglos atrás. Décadas más tarde, esta vocación industrial se transformaría con la llegada de fábricas modernas como la de Cementos Goyarrola en 1892.
+            </p>
+
+            <h3>Población y Riqueza: Un Pueblo Modesto</h3>
+
+            <p>
+                Los datos demográficos que aporta Madoz son reveladores de la pequeña escala de Alonsotegi en aquella época:
+            </p>
+
+            <div class="data-grid">
+                <div class="data-item">
+                    <span class="data-number">44</span>
+                    <span class="data-label">VECINOS</span>
+                </div>
+                <div class="data-item">
+                    <span class="data-number">200</span>
+                    <span class="data-label">HABITANTES</span>
+                </div>
+            </div>
+
+            <p>
+                Estas cifras están basadas en el <strong>censo de la matrícula catastral de 1842</strong>. Sin embargo, como el propio texto del blog señala, este censo ha sido criticado por los historiadores por ser inexacto y <strong>tender a la baja</strong>. Al parecer, los ayuntamientos ocultaban riqueza y población para esquivar impuestos y disminuir el reclutamiento militar obligatorio.
+            </p>
+
+            <div class="highlight-box">
+                <p><strong>💡 ¿44 vecinos o más?</strong></p>
+                <p style="margin-top: 1rem;">
+                    Es probable que la población real de Alonsotegi fuera algo mayor de lo que indica Madoz. Aun así, estamos hablando de una comunidad pequeña, rural, donde todos se conocían. Para poner en perspectiva: cuarenta años después, en 1888, cuando Alonsotegi se anexiona a Barakaldo, el secretario municipal certifica que había <strong>61 vecinos</strong> (unos 300 habitantes). El pueblo había crecido, pero seguía siendo modesto.
+                </p>
+            </div>
+
+            <h3>Un Retrato del Alonsotegi Preindustrial</h3>
+
+            <p>
+                Lo que el Diccionario de Madoz nos muestra es un Alonsotegi muy diferente al que conocemos hoy. Era un pueblo pequeño, con menos de 200 habitantes oficialmente censados. Su economía se basaba en la agricultura de subsistencia, la ganadería, y dos instalaciones industriales modestas pero prósperas: una ferrería y un molino.
+            </p>
+
+            <p>
+                Era un pueblo <strong>sin voz política</strong>, excluido de las Juntas de Gernika por haberse separado de Arrigorriaga sin permiso oficial. Sus caminos estaban mal cuidados, pero tenía dos puentes sobre el Kadagua que lo conectaban con el mundo exterior. Su iglesia, de dimensiones modestas (~180 m²), era el centro de la vida comunitaria.
+            </p>
+
+            <p>
+                Apenas cuatro décadas después de esta descripción, todo cambiaría. La fundación de la fábrica de Cementos Goyarrola en 1892 transformaría radicalmente la demografía, la economía y la identidad del valle. Pero el Alonsotegi que Madoz documentó —rural, pequeño, con su ferrería activa y sus campos de maíz— es el Alonsotegi de las raíces. Es el pueblo que nuestros tatarabuelos conocieron.
+            </p>
+
+            <div class="highlight-box" style="background: linear-gradient(135deg, var(--color-sepia), var(--color-bg-alt)); margin-top: 3rem;">
+                <h4 style="color: var(--color-primary); font-size: 1.3rem; margin-bottom: 1rem;">💭 Reflexión final</h4>
+                <p>
+                    Hoy, cuando caminamos por las calles de Alonsotegi, es difícil imaginar ese pueblo de 200 almas, con su ferrería humeante, sus campos de maíz y sus caminos "poco cuidados". Pero ese Alonsotegi existió. Y gracias al Diccionario de Madoz, podemos asomarnos a él.
+                </p>
+                <p style="margin-top: 1rem;">
+                    La historia no es solo la de los grandes eventos. Es también la de los pueblos pequeños, documentados minuciosamente por estadísticos obsesivos como Pascual Madoz. Gracias a su obra titánica, Alonsotegi no es un punto en blanco en el mapa del siglo XIX. Tiene voz. Tiene datos. Tiene memoria.
+                </p>
+            </div>
+
+            <div style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-alt); border-radius: 10px; border-left: 4px solid var(--color-primary);">
+                <h4 style="color: var(--color-primary); margin-bottom: 1rem;">📚 Fuentes consultadas</h4>
+                <ul style="line-height: 2; color: var(--color-text-light);">
+                    <li>Diccionario geográfico-estadístico-histórico de España y sus posesiones de Ultramar - Pascual Madoz (1845-1850)</li>
+                    <li>Blog Alonsotegi Sustraiak - Artículo "Alonsotegi 1845-1850"</li>
+                    <li>Censo de la matrícula catastral de 1842</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 4rem; padding: 2rem; background: var(--color-bg-alt); border-radius: 10px;">
+            <a href="articulos.html" class="btn-v2 btn-v2--primary">← Volver a Artículos</a>
+        </div>
+    </article>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Alonsotegi Sustraiak</h3>
+                    <p>Recuperando y compartiendo la memoria histórica de nuestro pueblo.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="cronologia.html">Cronología</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                        <li><a href="articulos.html">Artículos</a></li>
+                        <li><a href="colabora.html">Colabora</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p>¿Tienes fotos o historias que compartir?</p>
+                    <a href="colabora.html" class="btn-v2 btn-v2--secondary">Colabora con nosotros</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Alonsotegi Sustraiak. Proyecto de recuperación de memoria histórica.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
