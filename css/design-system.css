@@ -601,7 +601,7 @@
 
 .latest-article-section {
     background: linear-gradient(135deg, var(--color-sepia), var(--color-bg-alt));
-    padding: var(--spacing-2xl) 0;
+    padding: var(--spacing-3xl) 0; /* Unificado */
     margin: 0;
     border-radius: var(--radius-lg);
 }
