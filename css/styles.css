@@ -802,7 +802,16 @@ a:hover { color: var(--color-primary-dark); }
 .timeline-marker { left: 11px !important; }
 }
 @media (max-width: 600px) {
-.hero { height: 400px; }
+/* ← BORRAR esta línea problemática del hero */
 .contact-form { padding: var(--spacing-lg) var(--spacing-md); }
 .gallery-grid { grid-template-columns: 1fr; }
+
+/* ← FIX CRÍTICO: Asegurar espaciado en móvil */
+.hero-meta {
+    margin-bottom: var(--spacing-2xl) !important;
+}
+
+.hero-content {
+    padding: var(--spacing-xl) 0 !important;
+}
 }
