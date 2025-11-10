@@ -682,35 +682,53 @@
 }
 
 /* ============================================
-   13. ESPACIADO FINAL DE PÁGINAS (FIX)
+   13. ESPACIADO FINAL DE PÁGINAS (FIX) - MEJORADO
    ============================================ */
 
 /* Asegurar espaciado consistente antes del footer */
-.gallery-section:last-of-type,
-.comparison-section:last-of-type,
-.articles-section:last-of-type,
-.section-block:last-of-type {
+.gallery-section,
+.comparison-section,
+.articles-section,
+.timeline-container,
+.contact-section {
     padding-bottom: var(--spacing-4xl) !important;  /* ← 128px de espacio */
 }
 
-/* Para páginas sin section-block al final */
-body > section:last-of-type:not(.footer) {
-    margin-bottom: var(--spacing-3xl);  /* ← 96px de espacio */
+/* CRÍTICO: Forzar separación en última sección antes del footer */
+body > section:last-of-type:not(.footer),
+body > section:nth-last-of-type(2) {
+    margin-bottom: var(--spacing-3xl) !important;  /* ← 96px de espacio */
 }
 
-/* Ajuste específico para galería */
-.gallery-section {
-    padding: var(--spacing-3xl) 0 var(--spacing-4xl) 0;  /* ← Más espacio abajo */
+/* Hero: Asegurar separación de cajas del borde inferior */
+.hero-meta {
+    margin-bottom: var(--spacing-2xl) !important;  /* ← Separación crítica */
+    padding-bottom: var(--spacing-xl) !important;
 }
 
-/* Ajuste específico para comparaciones */
-.comparison-section {
-    padding: var(--spacing-3xl) 0 var(--spacing-4xl) 0;
+/* Fix específico para móvil */
+@media (max-width: 768px) {
+    .gallery-section,
+    .comparison-section,
+    .articles-section,
+    .timeline-container {
+        padding-bottom: var(--spacing-3xl) !important;
+    }
+    
+    .hero-meta {
+        margin-bottom: var(--spacing-xl) !important;
+    }
 }
 
-/* Ajuste específico para artículos */
-.articles-section {
-    padding: var(--spacing-3xl) 0 var(--spacing-4xl) 0;
+@media (max-width: 600px) {
+    .hero {
+        padding-bottom: var(--spacing-2xl) !important;
+    }
+    
+    .hero-meta {
+        margin-bottom: var(--spacing-xl) !important;
+        padding-bottom: var(--spacing-md) !important;
+    }
 }
 
 /* ============================================
