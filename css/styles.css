@@ -258,17 +258,7 @@ a:hover { color: var(--color-primary-dark); }
         padding: var(--spacing-sm);
     }
 }
-.hero-meta strong {
-    display: block;
-    font-family: var(--font-heading);
-    font-size: 1.25rem;
-    margin-bottom: var(--spacing-3xs);
-    color: var(--color-white);
-}
-.hero-meta span {
-    font-size: 0.9rem;
-    color: rgba(255,255,255,0.75);
-}
+
 .page-hero {
     position: relative;
     padding: clamp(3rem, 9vw, 5rem) 0;
