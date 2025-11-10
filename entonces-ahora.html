@@ -32,16 +32,38 @@
         </div>
     </nav>
 
-    <section class="comparison-section">
+    <section class="page-hero page-hero--neutral">
         <div class="container">
-            <h2 class="section-title">Entonces y Ahora</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; color: var(--color-text-light); font-size: 1.1rem;">
-                Desliza el controlador para comparar las mismas ubicaciones de Alonsotegi en diferentes épocas. Observa cómo ha evolucionado nuestro pueblo.
-            </p>
+            <div class="page-hero__body">
+                <span class="page-hero__eyebrow">Comparativa interactiva</span>
+                <h1 class="page-hero__title">Entonces y Ahora</h1>
+                <p class="page-hero__description">
+                    Desliza el controlador para comparar exactamente el mismo punto de Alonsotegi en dos épocas distintas.
+                    Una experiencia inmersiva que revela la transformación urbana y paisajística.
+                </p>
+                <div class="page-hero__cta">
+                    <a href="#comparisons" class="btn-v2 btn-v2--primary">Ver comparativas</a>
+                    <a href="galeria.html" class="btn-v2 btn-v2--ghost">Explorar galería</a>
+                </div>
+            </div>
+            <ul class="page-hero__meta">
+                <li>
+                    <strong>4 escenarios</strong>
+                    <span>Puentes, industria, valle y casco urbano</span>
+                </li>
+                <li>
+                    <strong>1960‒2024</strong>
+                    <span>Imágenes restauradas y actuales</span>
+                </li>
+            </ul>
+        </div>
+    </section>
 
+    <section id="comparisons" class="comparison-section section-block">
+        <div class="container">
             <div class="comparison-grid">
                 <div class="comparison-item">
-                    <h3 style="color: var(--color-primary); margin-bottom: 1.5rem; font-family: var(--font-heading);">Puente sobre el Kadagua</h3>
+                    <h3>Puente sobre el Kadagua</h3>
                     <div class="comparison-slider">
                         <div class="comparison-image comparison-before">
                             <img src="https://via.placeholder.com/800x500/8B4513/FFFFFF?text=Puente+Antiguo+1960" alt="Puente antiguo">
@@ -63,7 +85,7 @@
                 </div>
 
                 <div class="comparison-item">
-                    <h3 style="color: var(--color-primary); margin-bottom: 1.5rem; font-family: var(--font-heading);">Zona Industrial</h3>
+                    <h3>Zona Industrial</h3>
                     <div class="comparison-slider">
                         <div class="comparison-image comparison-before">
                             <img src="https://via.placeholder.com/800x500/654321/FFFFFF?text=Fabrica+Goyarrola+1920" alt="Fábrica antigua">
@@ -79,13 +101,13 @@
                         <span class="comparison-label">← 1920</span>
                         <span class="comparison-label">2024 →</span>
                     </div>
-                    <p style="margin-top: 1rem; color: var(--color-text-light); line-height: 1.6;">
+                    <p>
                         Donde antes estaban las instalaciones de la fábrica Goyarrola, hoy encontramos bloques residenciales y espacios verdes regenerados.
                     </p>
                 </div>
 
                 <div class="comparison-item">
-                    <h3 style="color: var(--color-primary); margin-bottom: 1.5rem; font-family: var(--font-heading);">Vista del Valle</h3>
+                    <h3>Vista del Valle</h3>
                     <div class="comparison-slider">
                         <div class="comparison-image comparison-before">
                             <img src="https://via.placeholder.com/800x500/8B4513/FFFFFF?text=Valle+Rural+1950" alt="Valle antiguo">
@@ -101,13 +123,13 @@
                         <span class="comparison-label">← Años 50</span>
                         <span class="comparison-label">Hoy →</span>
                     </div>
-                    <p style="margin-top: 1rem; color: var(--color-text-light); line-height: 1.6;">
+                    <p>
                         La transformación del valle de rural a urbano es evidente. Sin embargo, el monte Ganekogorta sigue siendo el guardián inmutable del horizonte.
                     </p>
                 </div>
 
                 <div class="comparison-item">
-                    <h3 style="color: var(--color-primary); margin-bottom: 1.5rem; font-family: var(--font-heading);">Casco Urbano</h3>
+                    <h3>Casco Urbano</h3>
                     <div class="comparison-slider">
                         <div class="comparison-image comparison-before">
                             <img src="https://via.placeholder.com/800x500/654321/FFFFFF?text=Centro+1970" alt="Centro antiguo">
@@ -123,26 +145,24 @@
                         <span class="comparison-label">← 1970</span>
                         <span class="comparison-label">2024 →</span>
                     </div>
-                    <p style="margin-top: 1rem; color: var(--color-text-light); line-height: 1.6;">
+                    <p>
                         El casco urbano ha crecido significativamente. Calles antes de tierra ahora están asfaltadas y rodeadas de servicios modernos.
                     </p>
                 </div>
             </div>
 
-            <div style="text-align: center; margin-top: 4rem; padding: 2rem; background: var(--color-sepia); border-radius: 10px; border-left: 4px solid var(--color-primary);">
-                <h4 style="color: var(--color-primary); margin-bottom: 1rem;">💡 Cómo usar el comparador</h4>
-                <p style="color: var(--color-text-light);">
+            <div class="info-panel" style="text-align: center;">
+                <h4 style="color: var(--color-primary); margin-bottom: var(--spacing-sm);">💡 Cómo usar el comparador</h4>
+                <p>
                     En ordenador: arrastra el controlador central con el ratón.<br>
-                    En móvil: arrastra con el dedo sobre el controlador.
+                    En móvil o tablet: desliza con el dedo sobre el controlador.
                 </p>
             </div>
 
-            <div style="text-align: center; margin-top: 3rem; padding: 3rem; background: var(--color-bg-alt); border-radius: 10px;">
-                <h3 style="color: var(--color-primary); margin-bottom: 1rem;">¿Tienes fotos antiguas del mismo lugar?</h3>
-                <p style="color: var(--color-text-light); margin-bottom: 2rem;">
-                    Podemos crear más comparaciones si nos compartes fotos antiguas. Dinos la ubicación exacta y buscaremos la foto actual.
-                </p>
-                <a href="colabora.html" class="btn-v2 btn-v2--primary">Envía tus fotos</a>
+            <div class="cta-panel">
+                <h3>¿Tienes fotos antiguas del mismo lugar?</h3>
+                <p>Podemos crear nuevas comparativas si nos compartes tus imágenes históricas. Indícanos la ubicación exacta y buscaremos el encuadre actual.</p>
+                <a href="colabora.html" class="btn-v2 btn-v2--primary">Enviar mis fotos</a>
             </div>
         </div>
     </section>

@@ -32,22 +32,40 @@
         </div>
     </nav>
 
-    <section class="articles-section">
+    <section class="page-hero page-hero--neutral">
         <div class="container">
-            <h2 class="section-title">Artículos de Investigación</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; color: var(--color-text-light); font-size: 1.1rem;">
-                Investigaciones profundas sobre aspectos específicos de la historia de Alonsotegi. Cada artículo explora en detalle acontecimientos, personajes o épocas que marcaron nuestro pueblo.
-            </p>
-            <div style="max-width: 600px; margin: 0 auto 3rem; text-align: center;">
-                <h3 style="color: var(--color-primary); margin-bottom: 1rem;">Buscar artículos</h3>
-                <input 
-                    type="text" 
-                    id="search-input" 
-                    placeholder="Buscar por palabra clave..." 
-                    style="width: 100%; padding: 15px; border: 2px solid var(--color-border); border-radius: 25px; font-size: 1rem;"
-                >
+            <div class="page-hero__body">
+                <span class="page-hero__eyebrow">Investigación local</span>
+                <h1 class="page-hero__title">Artículos de Investigación</h1>
+                <p class="page-hero__description">
+                    Estudios en profundidad sobre episodios, personajes y espacios que marcaron la historia de Alonsotegi.
+                    Cada artículo combina fuentes documentales, memoria oral y análisis visual.
+                </p>
+                <div class="search-bar">
+                    <span class="search-bar__icon" aria-hidden="true">🔍</span>
+                    <input
+                        type="text"
+                        id="search-input"
+                        class="search-bar__input"
+                        placeholder="Buscar por palabra clave, época o temática..."
+                    >
+                </div>
             </div>
+            <ul class="page-hero__meta">
+                <li>
+                    <strong>12 artículos</strong>
+                    <span>Barrio, industria, biografías y patrimonio</span>
+                </li>
+                <li>
+                    <strong>Actualización constante</strong>
+                    <span>Próximos temas en preparación</span>
+                </li>
+            </ul>
+        </div>
+    </section>
 
+    <section class="articles-section section-block">
+        <div class="container">
             <div class="articles-grid">
 
                 <!-- Articulo - Inquisidor -->
@@ -299,18 +317,18 @@
                 </div>
             </div>
 
-            <div style="text-align: center; margin-top: 4rem; padding: 3rem; background: var(--color-bg-alt); border-radius: 10px;">
-                <h3 style="color: var(--color-primary); margin-bottom: 1rem;">Próximamente: Más Investigaciones</h3>
-                <p style="color: var(--color-text-light); margin-bottom: 1.5rem;">Estamos preparando artículos sobre:</p>
-                <ul style="list-style: none; color: var(--color-text-light); line-height: 2;">
-                    <li>🏭 La Central Hidroeléctrica de "La Papelera"</li>
+            <div class="cta-panel">
+                <h3>Próximamente: Más investigaciones</h3>
+                <p>Estamos trabajando en nuevas líneas de investigación para ampliar el archivo:</p>
+                <ul style="list-style: none; padding: 0; margin: var(--spacing-md) 0; color: var(--color-text-light); line-height: 2;">
+                    <li>🏭 La central hidroeléctrica de “La Papelera”</li>
                     <li>⚔️ El Cinturón de Hierro y la Guerra Civil</li>
                     <li>🏘️ Evolución urbana del casco histórico</li>
                     <li>👥 Personajes ilustres de Alonsotegi</li>
                     <li>🌊 Riadas históricas del Kadagua</li>
                 </ul>
-                <p style="color: var(--color-text-light); margin-top: 2rem; font-style: italic;">
-                    ¿Tienes información sobre algún tema específico? <a href="colabora.html" style="color: var(--color-primary); font-weight: 600;">Colabora con nosotros</a>
+                <p style="color: var(--color-text-light); font-style: italic;">
+                    ¿Tienes información o documentación sobre algún tema específico? <a href="colabora.html" style="color: var(--color-primary); font-weight: 600;">Colabora con nosotros</a>.
                 </p>
             </div>
         </div>

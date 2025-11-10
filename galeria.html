@@ -32,14 +32,36 @@
         </div>
     </nav>
 
-    <section class="gallery-section">
+    <section class="page-hero page-hero--neutral">
         <div class="container">
-            <h2 class="section-title">Galería Histórica</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; color: var(--color-text-light); font-size: 1.1rem;">
-                Una colección visual que documenta la evolución de Alonsotegi a través del tiempo. Haz clic en cualquier imagen para verla en detalle.
-            </p>
+            <div class="page-hero__body">
+                <span class="page-hero__eyebrow">Archivo visual</span>
+                <h1 class="page-hero__title">Galería Histórica</h1>
+                <p class="page-hero__description">
+                    Una colección que documenta la evolución de Alonsotegi a través de paisajes, fábricas, calles y
+                    personas. Cada imagen ha sido restaurada para preservar detalles y memoria.
+                </p>
+                <div class="page-hero__cta">
+                    <a href="#gallery-grid" class="btn-v2 btn-v2--primary">Recorrer la galería</a>
+                    <a href="entonces-ahora.html" class="btn-v2 btn-v2--ghost">Ver comparativas</a>
+                </div>
+            </div>
+            <ul class="page-hero__meta">
+                <li>
+                    <strong>9 series</strong>
+                    <span>Paisajes, industria, arquitectura y vida social</span>
+                </li>
+                <li>
+                    <strong>1800‒1980</strong>
+                    <span>Material digitalizado y catalogado</span>
+                </li>
+            </ul>
+        </div>
+    </section>
 
-            <div class="gallery-filters">
+    <section class="gallery-section section-block">
+        <div class="container">
+            <div class="filter-bar gallery-filters">
                 <button class="filter-btn active" data-filter="all">Todas</button>
                 <button class="filter-btn" data-filter="paisajes">Paisajes</button>
                 <button class="filter-btn" data-filter="industrial">Industrial</button>
@@ -47,7 +69,7 @@
                 <button class="filter-btn" data-filter="personas">Personas</button>
             </div>
 
-            <div class="gallery-grid">
+            <div id="gallery-grid" class="gallery-grid">
                 <div class="gallery-item" data-category="paisajes">
                     <img src="images/fotos-historicas/foto1.jpg" alt="Vista del río Kadagua con edificios">
                     <div class="gallery-overlay">
@@ -121,10 +143,10 @@
                 </div>
             </div>
 
-            <div style="text-align: center; margin-top: 4rem; padding: 3rem; background: var(--color-bg-alt); border-radius: 10px;">
-                <h3 style="color: var(--color-primary); margin-bottom: 1rem;">¿Tienes fotos históricas de Alonsotegi?</h3>
-                <p style="color: var(--color-text-light); margin-bottom: 2rem;">Ayúdanos a ampliar esta galería compartiendo tus fotografías antiguas del pueblo.</p>
-                <a href="colabora.html" class="btn-v2 btn-v2--primary">Colabora con nosotros</a>
+            <div class="cta-panel cta-panel--alt">
+                <h3>¿Tienes fotos históricas de Alonsotegi?</h3>
+                <p>Escaneamos gratuitamente fotografías familiares, negativos o diapositivas y te devolvemos copias restauradas. Tu aporte ayuda a completar la memoria visual del valle.</p>
+                <a href="colabora.html" class="btn-v2 btn-v2--primary">Compartir mis imágenes</a>
             </div>
         </div>
     </section>

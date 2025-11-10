@@ -42,11 +42,33 @@
             <img src="images/hero-alonsotegi.jpg" alt="Vista del río Kadagua en Alonsotegi">
         </div>
         <div class="hero-overlay">
-            <div class="hero-content">
-                <h2 class="hero-title">Alonsotegi Sustraiak</h2>
-                <p class="hero-subtitle">Para entender quiénes somos, primero debemos conocer de dónde venimos</p>
-                <!-- ✅ CAMBIO: Botón nuevo con btn-v2 -->
-                <a href="cronologia.html" class="btn-v2 btn-v2--primary btn-v2--lg">Explora nuestra historia</a>
+            <div class="container">
+                <div class="hero-content">
+                    <span class="hero-eyebrow">Memoria viva de Alonsotegi</span>
+                    <h2 class="hero-title">Alonsotegi Sustraiak</h2>
+                    <p class="hero-description">
+                        Un archivo vivo para recorrer las raíces de nuestro pueblo. Investigaciones, fotografías históricas
+                        y relatos que conectan el trabajo, el paisaje y la gente que forjó Alonsotegi.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="cronologia.html" class="btn-v2 btn-v2--primary btn-v2--lg">Explora la cronología</a>
+                        <a href="colabora.html" class="btn-v2 btn-v2--ghost btn-v2--lg">Colabora con el archivo</a>
+                    </div>
+                    <ul class="hero-meta">
+                        <li>
+                            <strong>140+</strong>
+                            <span>Años de memoria documentada</span>
+                        </li>
+                        <li>
+                            <strong>800+</strong>
+                            <span>Fotografías y documentos catalogados</span>
+                        </li>
+                        <li>
+                            <strong>12</strong>
+                            <span>Rutas temáticas para descubrir el valle</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
@@ -54,6 +76,7 @@
     <!-- Introducción -->
     <section class="intro-section">
         <div class="container">
+            <span class="section-subtitle">Quiénes somos</span>
             <h2 class="section-title">La Identidad de un Pueblo</h2>
             <div class="intro-content">
                 <p class="intro-text">
@@ -72,6 +95,7 @@
     <!-- ✅ NUEVO: Sección Último Artículo -->
     <section class="latest-article-section">
         <div class="container">
+            <span class="section-subtitle">Artículo destacado</span>
             <h2 class="section-title">Último Artículo Publicado</h2>
             
             <div class="latest-article-card">
@@ -80,19 +104,17 @@
                      class="latest-article-card__image">
                 
                 <div class="latest-article-card__content">
-                    <span class="latest-article-badge">🆕 NUEVO</span>
-                    
-                    <h3 class="text-3xl font-bold text-primary mb-md">
+                    <h3 class="text-3xl font-bold text-primary">
                         Fray Martín de Coscojales: Historiador e Inquisidor
                     </h3>
                     
-                    <div class="flex gap-md mb-md" style="flex-wrap: wrap; font-size: 0.9rem; color: var(--color-text-light);">
+                    <div class="latest-article-card__meta">
                         <span>📖 Biografía</span>
                         <span>🏛️ Siglo XVI</span>
                         <span>⏱️ 12 min de lectura</span>
                     </div>
                     
-                    <p class="text-light leading-relaxed mb-lg">
+                    <p class="latest-article-card__excerpt">
                         El primer cronista de Bizkaia nació en Alonsotegi. Consejero de Inquisición, 
                         autor de "Antigüedades de Vizcaya" y observador perspicaz de las costumbres 
                         vascas del siglo XVI. La historia de un hijo ilustre que documentó su tierra 
@@ -111,47 +133,32 @@
     <!-- Secciones destacadas -->
     <section class="features-section">
         <div class="container">
+            <span class="section-subtitle">Qué puedes explorar</span>
             <h2 class="section-title">Explora Nuestra Historia</h2>
             <div class="features-grid">
-                <div class="card-v2 text-center">
-                    <div class="card-v2__content">
-                        <div class="text-5xl mb-md">📅</div>
-                        <h3 class="card-v2__title text-2xl">Cronología</h3>
-                        <p class="card-v2__excerpt">Viaja a través del tiempo desde el siglo XIV hasta nuestros días</p>
-                        <div class="card-v2__footer" style="border: none; padding-top: 0;">
-                            <a href="cronologia.html" class="btn-v2 btn-v2--ghost btn-v2--sm">Ver línea temporal →</a>
-                        </div>
-                    </div>
+                <div class="feature-card">
+                    <span class="feature-card__icon" aria-hidden="true">📅</span>
+                    <h3 class="feature-card__title">Cronología</h3>
+                    <p>Viaja a través del tiempo desde el siglo XIV hasta nuestros días y contextualiza cada episodio.</p>
+                    <a href="cronologia.html" class="feature-card__link">Ver línea temporal</a>
                 </div>
-                <div class="card-v2 text-center">
-                    <div class="card-v2__content">
-                        <div class="text-5xl mb-md">📸</div>
-                        <h3 class="card-v2__title text-2xl">Galería Histórica</h3>
-                        <p class="card-v2__excerpt">Imágenes que cuentan la historia visual de nuestro pueblo</p>
-                        <div class="card-v2__footer" style="border: none; padding-top: 0;">
-                            <a href="galeria.html" class="btn-v2 btn-v2--ghost btn-v2--sm">Explorar fotos →</a>
-                        </div>
-                    </div>
+                <div class="feature-card">
+                    <span class="feature-card__icon" aria-hidden="true">📸</span>
+                    <h3 class="feature-card__title">Galería Histórica</h3>
+                    <p>Imágenes que cuentan la historia visual de nuestro pueblo y capturan su transformación.</p>
+                    <a href="galeria.html" class="feature-card__link">Explorar fotos</a>
                 </div>
-                <div class="card-v2 text-center">
-                    <div class="card-v2__content">
-                        <div class="text-5xl mb-md">🔄</div>
-                        <h3 class="card-v2__title text-2xl">Entonces y Ahora</h3>
-                        <p class="card-v2__excerpt">Compara cómo ha cambiado Alonsotegi a lo largo del tiempo</p>
-                        <div class="card-v2__footer" style="border: none; padding-top: 0;">
-                            <a href="entonces-ahora.html" class="btn-v2 btn-v2--ghost btn-v2--sm">Ver comparativas →</a>
-                        </div>
-                    </div>
+                <div class="feature-card">
+                    <span class="feature-card__icon" aria-hidden="true">🔄</span>
+                    <h3 class="feature-card__title">Entonces y Ahora</h3>
+                    <p>Compara cómo ha cambiado Alonsotegi a lo largo del tiempo con un visor interactivo.</p>
+                    <a href="entonces-ahora.html" class="feature-card__link">Ver comparativas</a>
                 </div>
-                <div class="card-v2 text-center">
-                    <div class="card-v2__content">
-                        <div class="text-5xl mb-md">📖</div>
-                        <h3 class="card-v2__title text-2xl">Artículos</h3>
-                        <p class="card-v2__excerpt">Investigaciones profundas sobre nuestra historia local</p>
-                        <div class="card-v2__footer" style="border: none; padding-top: 0;">
-                            <a href="articulos.html" class="btn-v2 btn-v2--ghost btn-v2--sm">Leer más →</a>
-                        </div>
-                    </div>
+                <div class="feature-card">
+                    <span class="feature-card__icon" aria-hidden="true">📖</span>
+                    <h3 class="feature-card__title">Artículos</h3>
+                    <p>Investigaciones profundas que dan voz a los protagonistas y a los lugares de nuestra historia.</p>
+                    <a href="articulos.html" class="feature-card__link">Leer artículos</a>
                 </div>
             </div>
         </div>
@@ -164,34 +171,28 @@
             <div class="highlights-grid">
                 
                 <!-- Card 1: Goyarrola (clickeable) -->
-                <a href="articulos.html#goyarrola" class="highlight-card" style="text-decoration: none; color: inherit; display: block; cursor: pointer;">
+                <div class="highlight-card">
                     <div class="highlight-year">1892</div>
                     <h3>Fundación de Goyarrola</h3>
                     <p>Nace la fábrica de Cementos Portland, inicio de la revolución industrial en el valle.</p>
-                    <div style="margin-top: 1rem; text-align: center;">
-                        <span class="btn-v2 btn-v2--outline btn-v2--sm">Leer más →</span>
-                    </div>
-                </a>
+                    <a href="articulos.html#goyarrola" class="highlight-card__cta">Conocer la historia</a>
+                </div>
                 
                 <!-- Card 2: Inundaciones (clickeable) -->
-                <a href="articulos.html#inundaciones" class="highlight-card" style="text-decoration: none; color: inherit; display: block; cursor: pointer;">
+                <div class="highlight-card">
                     <div class="highlight-year">1983</div>
                     <h3>Las Inundaciones</h3>
                     <p>Una riada histórica devasta el pueblo, marcando un antes y un después.</p>
-                    <div style="margin-top: 1rem; text-align: center;">
-                        <span class="btn-v2 btn-v2--outline btn-v2--sm">Leer más →</span>
-                    </div>
-                </a>
+                    <a href="articulos.html#inundaciones" class="highlight-card__cta">Recordar aquel día</a>
+                </div>
                 
                 <!-- Card 3: Municipio 111 (clickeable) -->
-                <a href="articulo-1991-nacimiento-municipio.html" class="highlight-card" style="text-decoration: none; color: inherit; display: block; cursor: pointer;">
+                <div class="highlight-card">
                     <div class="highlight-year">1991</div>
                     <h3>Nacimiento del Municipio</h3>
                     <p>Alonsotegi se convierte en el municipio 111 de Bizkaia tras décadas de lucha.</p>
-                    <div style="margin-top: 1rem; text-align: center;">
-                        <span class="btn-v2 btn-v2--outline btn-v2--sm">Leer más →</span>
-                    </div>
-                </a>
+                    <a href="articulo-1991-nacimiento-municipio.html" class="highlight-card__cta">Repasar el proceso</a>
+                </div>
                 
             </div>
         </div>
