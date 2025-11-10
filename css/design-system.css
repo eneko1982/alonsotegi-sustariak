@@ -682,5 +682,75 @@
 }
 
 /* ============================================
+   13. ESPACIADO FINAL DE PÁGINAS (FIX)
+   ============================================ */
+
+/* Asegurar espaciado consistente antes del footer */
+.gallery-section:last-of-type,
+.comparison-section:last-of-type,
+.articles-section:last-of-type,
+.section-block:last-of-type {
+    padding-bottom: var(--spacing-4xl) !important;  /* ← 128px de espacio */
+}
+
+/* Para páginas sin section-block al final */
+body > section:last-of-type:not(.footer) {
+    margin-bottom: var(--spacing-3xl);  /* ← 96px de espacio */
+}
+
+/* Ajuste específico para galería */
+.gallery-section {
+    padding: var(--spacing-3xl) 0 var(--spacing-4xl) 0;  /* ← Más espacio abajo */
+}
+
+/* Ajuste específico para comparaciones */
+.comparison-section {
+    padding: var(--spacing-3xl) 0 var(--spacing-4xl) 0;
+}
+
+/* Ajuste específico para artículos */
+.articles-section {
+    padding: var(--spacing-3xl) 0 var(--spacing-4xl) 0;
+}
+
+/* ============================================
+   14. MEJORAS ADICIONALES HERO
+   ============================================ */
+
+/* Transición suave en scroll para hero */
+.hero-image img {
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Animación sutil al cargar */
+@keyframes heroFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content > * {
+    animation: heroFadeIn 0.8s ease-out backwards;
+}
+
+.hero-eyebrow { animation-delay: 0.1s; }
+.hero-title { animation-delay: 0.2s; }
+.hero-description { animation-delay: 0.3s; }
+.hero-cta { animation-delay: 0.4s; }
+.hero-meta { animation-delay: 0.5s; }
+
+/* Desactivar animaciones en móvil para mejor performance */
+@media (max-width: 768px) {
+    .hero-content > * {
+        animation: none;
+    }
+}
+
+/* ============================================
    FIN DEL DESIGN SYSTEM
    ============================================ */
