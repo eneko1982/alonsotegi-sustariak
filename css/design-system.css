@@ -254,7 +254,7 @@
 
 .card-v2__title {
     font-family: var(--font-heading);
-    font-size: var(--font-size-2xl);
+    font-size: clamp(1.25rem, 3vw + 0.7rem, 1.5rem); /* text-2xl fluido */
     color: var(--color-primary);
     margin-bottom: var(--spacing-md);
     line-height: var(--line-height-tight);
@@ -436,7 +436,7 @@
 .text-lg { font-size: var(--font-size-lg); }
 .text-xl { font-size: var(--font-size-xl); }
 .text-2xl { font-size: var(--font-size-2xl); }
-.text-3xl { font-size: var(--font-size-3xl); }
+.text-3xl { font-size: clamp(1.5rem, 4vw + 0.8rem, 1.875rem); /* text-3xl fluido */ }
 .text-4xl { font-size: var(--font-size-4xl); }
 .text-5xl { font-size: var(--font-size-5xl); }
 
@@ -637,7 +637,7 @@
     display: none;  /* ← OCULTAR BADGE "NUEVO" */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 968px) {
     .latest-article-card {
         grid-template-columns: 1fr;
     }

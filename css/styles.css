@@ -143,7 +143,7 @@ a:hover { color: var(--color-primary-dark); }
 }
 .comparison-grid { display: grid; gap: var(--spacing-2xl); }
 .comparison-item { background: var(--color-white); padding: var(--spacing-lg); border-radius: 10px; box-shadow: var(--shadow-md); }
-.comparison-slider { position: relative; width: 100%; height: 500px; overflow: hidden; border-radius: 10px; }
+.comparison-slider { position: relative; width: 100%; aspect-ratio: 16 / 9; height: auto; overflow: hidden; border-radius: 10px; }
 .comparison-image { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 .comparison-image img { width: 100%; height: 100%; object-fit: cover; }
 .comparison-after { clip-path: inset(0 50% 0 0); }
@@ -180,7 +180,7 @@ a:hover { color: var(--color-primary-dark); }
     padding: var(--spacing-3xl) 0; /* Unificado */
     background: var(--color-bg-alt); 
 }
-.contact-form { max-width: 700px; margin: 0 auto; background: var(--color-white); padding: var(--spacing-xl); border-radius: 10px; box-shadow: var(--shadow-md); }
+.contact-form { max-width: 700px; margin: 0 auto; background: var(--color-white); padding: var(--spacing-xl); border-radius: 10px; box-shadow: var(--shadow-md); margin-bottom: var(--spacing-3xl); }
 .form-group { margin-bottom: var(--spacing-md); }
 .form-group label { display: block; margin-bottom: var(--spacing-2xs); font-weight: 600; color: var(--color-primary); }
 .form-group input, .form-group textarea, .form-group select { width: 100%; padding: var(--spacing-xs); border: 2px solid var(--color-border); border-radius: 5px; font-family: var(--font-main); font-size: 1rem; transition: var(--transition); }
@@ -196,7 +196,7 @@ a:hover { color: var(--color-primary-dark); }
 .footer-section a { color: rgba(255,255,255,0.8); transition: var(--transition); }
 .footer-section a:hover { color: var(--color-white); padding-left: var(--spacing-3xs); }
 .footer-bottom { text-align: center; padding-top: var(--spacing-lg); border-top: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.7); }
-@media (max-width: 968px) {
+@media (max-width: 1024px) {
 .nav-menu { position: fixed; left: -100%; top: 70px; flex-direction: column; background: var(--color-white); width: 100%; text-align: center; transition: 0.3s; box-shadow: var(--shadow-lg); padding: var(--spacing-lg) 0; gap: 0; }
 .nav-menu.active { left: 0; }
 .nav-menu li { margin: var(--spacing-sm) 0; }
